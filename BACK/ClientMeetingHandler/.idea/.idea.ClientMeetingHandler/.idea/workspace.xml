@@ -8,10 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="main - Domain models." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738332182398</updated>
       <workItem from="1738332183779" duration="670000" />
-      <workItem from="1738349199196" duration="4376000" />
+      <workItem from="1738349199196" duration="5197000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -111,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738332574382</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="main - Domain models.">
+      <option name="closed" value="true" />
+      <created>1738353863792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738353863792</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Main - Initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main - Initial setup" />
+    <MESSAGE value="main - Domain models." />
+    <option name="LAST_COMMIT_MESSAGE" value="main - Domain models." />
   </component>
 </project>
