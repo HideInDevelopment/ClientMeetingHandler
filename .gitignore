@@ -1,0 +1,19 @@
+# Default ignored files
+BACK/shelf/
+BACK/workspace.xml
+# Rider ignored files
+BACK/contentModel.xml
+BACK/modules.xml
+BACK/projectSettingsUpdater.xml
+BACK/.idea.ClientMeetingHandler.iml
+# Editor-based HTTP Client requests
+BACK/httpRequests/
+# Datasource local storage ignored files
+BACK/dataSources/
+BACK/dataSources.local.xml
+
+BACK/ClientMeetingHandler/bin
+BACK/ClientMeetingHandler/obj
+
+BACK/ClientMeetingHandler/ClientMeetingHandler/bin
+BACK/ClientMeetingHandler/ClientMeetingHandler/obj
