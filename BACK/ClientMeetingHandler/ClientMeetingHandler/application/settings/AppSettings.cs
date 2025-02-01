@@ -2,6 +2,7 @@ namespace ClientMeetingHandler.application.settings;
 
 public class AppSettings
 {
+    #nullable disable
     public ClientSettings Client { get; set; }
     public ContactSettings Contact { get; set; }
     public LocalizationSettings Localization { get; set; }

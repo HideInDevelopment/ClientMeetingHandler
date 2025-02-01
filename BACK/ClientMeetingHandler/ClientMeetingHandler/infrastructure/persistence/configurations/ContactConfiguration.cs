@@ -19,8 +19,11 @@ public class ContactConfiguration : IEntityTypeConfiguration<Contact>
     {
         builder.HasKey(x => x.Id);
         
-        builder.Property(x => x.Country).IsRequired();
-        builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(20);
-        builder.Property(x => x.Email).IsRequired();
+        builder.Property(x => x.Country).IsRequired().HasMaxLength(_contactSettings.CountryMaxLength);
+        builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(_contactSettings.PhoneNumberMaxLength);
+        builder.Property(x => x.Email).IsRequired().HasMaxLength(_contactSettings.EmailMaxLength);
+        
+        builder.HasIndex(x => x.Id).HasDatabaseName("IX_Contact_Id");
+        builder.HasIndex(x => x.Email).HasDatabaseName("IX_Contact_Email");
     }
 }
