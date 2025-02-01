@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace ClientMeetingHandler.domain.entities;
 
-internal class ServiceType
+public class ServiceType
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.entities;
 
-internal class Contact
+public class Contact
 {
     public Guid Id { get; set; }
     public string Country { get; set; }

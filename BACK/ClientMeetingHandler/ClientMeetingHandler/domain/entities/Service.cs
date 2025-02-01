@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.entities;
 
-internal class Service
+public class Service
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.enums;
 
-internal enum NoteType
+public enum NoteType
 {
     Information, Warning, Danger
 }

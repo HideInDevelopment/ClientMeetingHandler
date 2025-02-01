@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.entities;
 
-internal class Localization
+public class Localization
 {
     public Guid Id { get; set; }
     public string Country { get; set; }

@@ -2,7 +2,7 @@ using ClientMeetingHandler.domain.enums;
 
 namespace ClientMeetingHandler.domain.entities;
 
-internal class Note
+public class Note
 {
     public Guid Id { get; set; }
     public string Title { get; set; }

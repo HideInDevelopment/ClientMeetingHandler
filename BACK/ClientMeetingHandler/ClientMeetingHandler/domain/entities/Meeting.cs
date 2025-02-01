@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.entities;
 
-internal class Meeting
+public class Meeting
 {
     public Guid Id { get; set; }
     public DateTime Date { get; set; }
