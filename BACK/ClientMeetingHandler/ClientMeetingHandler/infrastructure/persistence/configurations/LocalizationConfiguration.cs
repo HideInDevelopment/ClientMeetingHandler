@@ -6,13 +6,18 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class LocalizationConfiguration : IEntityTypeConfiguration<Localization>
+public class LocalizationConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Localization>
 {
     private readonly LocalizationSettings _localizationSettings;
 
     public LocalizationConfiguration(IOptions<AppSettings> appSettings)
     {
         _localizationSettings = appSettings.Value.Localization;
+    }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
     }
     
     public void Configure(EntityTypeBuilder<Localization> builder)

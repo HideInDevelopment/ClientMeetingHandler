@@ -6,13 +6,18 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class ClientConfiguration : IEntityTypeConfiguration<Client>
+public class ClientConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Client>
 {
     private readonly ClientSettings _clientSettings;
 
     public ClientConfiguration(IOptions<AppSettings> appSettings)
     {
         _clientSettings = appSettings.Value.Client;
+    }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
     }
 
     public void Configure(EntityTypeBuilder<Client> builder)
@@ -29,4 +34,6 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         builder.HasMany<Meeting>().WithOne().HasForeignKey(x => x.Id);
         builder.HasMany<Service>().WithOne().HasForeignKey(x => x.Id);
     }
+
+
 }

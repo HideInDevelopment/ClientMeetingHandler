@@ -6,13 +6,18 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class ContactConfiguration : IEntityTypeConfiguration<Contact>
+public class ContactConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Contact>
 {
     private readonly ContactSettings _contactSettings;
 
     public ContactConfiguration(IOptions<AppSettings> appSettings)
     {
         _contactSettings = appSettings.Value.Contact;
+    }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
     }
     
     public void Configure(EntityTypeBuilder<Contact> builder)

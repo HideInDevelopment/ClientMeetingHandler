@@ -6,13 +6,18 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class ServiceConfiguration : IEntityTypeConfiguration<Service>
+public class ServiceConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Service>
 {
     private readonly ServiceSettings _serviceSettings;
 
     public ServiceConfiguration(IOptions<AppSettings> appSettings)
     {
         _serviceSettings = appSettings.Value.Service;
+    }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
     }
     
     public void Configure(EntityTypeBuilder<Service> builder)

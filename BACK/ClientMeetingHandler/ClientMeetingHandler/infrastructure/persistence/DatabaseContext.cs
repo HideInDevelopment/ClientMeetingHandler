@@ -1,11 +1,21 @@
 using ClientMeetingHandler.domain.entities;
+using ClientMeetingHandler.infrastructure.persistence.configurations;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace ClientMeetingHandler.infrastructure.persistence;
 
 public class DatabaseContext : DbContext
 {
+    private readonly IEnumerable<IEntityConfiguration> _configurations;
+
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
+    
+    public DatabaseContext(DbContextOptions<DatabaseContext> options,
+        IEnumerable<IEntityConfiguration> configurations) : base(options)
+    {
+        _configurations = configurations;
+    }
     
     public DbSet<Client> Clients { get; set; }
     public DbSet<Contact> Contacts { get; set; }
@@ -17,8 +27,35 @@ public class DatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(DatabaseContext).Assembly);
+        foreach (var configuration in _configurations)
+        {
+            configuration.Configure(modelBuilder);
+        }
         
         base.OnModelCreating(modelBuilder);
+    }
+}
+
+public class OrderingContextDesignFactory : IDesignTimeDbContextFactory<DatabaseContext>
+{
+    public DatabaseContext CreateDbContext(string[] args)
+    {
+        IConfigurationRoot configurationRoot = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+        
+        var builder = new DbContextOptionsBuilder<DatabaseContext>();
+        
+        var connectionString = configurationRoot.GetConnectionString("Database");
+        
+        builder.UseSqlServer(
+            connectionString,
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.MigrationsHistoryTable("__EFMigrationHistory", "ClientMeetingHandler");
+            });
+        
+        return new DatabaseContext(builder.Options);
     }
 }

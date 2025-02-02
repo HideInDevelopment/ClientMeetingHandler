@@ -6,13 +6,18 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class NoteConfiguration : IEntityTypeConfiguration<Note>
+public class NoteConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Note>
 {
     private readonly NoteSettings _noteSettings;
     
     public NoteConfiguration(IOptions<AppSettings> appSettings)
     {
         _noteSettings = appSettings.Value.Note;
+    }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
     }
     
     public void Configure(EntityTypeBuilder<Note> builder)

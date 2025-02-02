@@ -10,9 +10,16 @@
   <component name="ChangeListManager">
     <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +42,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/application/settings/AppSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/domain/enums/NoteType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -107,7 +114,8 @@
       <workItem from="1738332183779" duration="670000" />
       <workItem from="1738349199196" duration="5574000" />
       <workItem from="1738408920648" duration="3091000" />
-      <workItem from="1738433265535" duration="2308000" />
+      <workItem from="1738433265535" duration="4524000" />
+      <workItem from="1738493196070" duration="1589000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -149,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738412291741</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main - Create entityConfiguration. Encapsulate dependency injection logic in static class.">
+      <option name="closed" value="true" />
+      <created>1738435990832</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738435990832</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +180,7 @@
     <MESSAGE value="main - Added Localization.cs into Meeting.cs" />
     <MESSAGE value="main - Localization.cs creation" />
     <MESSAGE value="main - Implements persistence layer with configuration to avoid magic numbers making them configurable." />
-    <option name="LAST_COMMIT_MESSAGE" value="main - Implements persistence layer with configuration to avoid magic numbers making them configurable." />
+    <MESSAGE value="main - Create entityConfiguration. Encapsulate dependency injection logic in static class." />
+    <option name="LAST_COMMIT_MESSAGE" value="main - Create entityConfiguration. Encapsulate dependency injection logic in static class." />
   </component>
 </project>

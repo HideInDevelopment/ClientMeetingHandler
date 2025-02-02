@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class ServiceTypeConfiguration : IEntityTypeConfiguration<ServiceType>
+public class ServiceTypeConfiguration : IEntityConfiguration, IEntityTypeConfiguration<ServiceType>
 {
     private readonly ServiceTypeSettings _serviceTypeSettings;
 
@@ -14,6 +14,12 @@ public class ServiceTypeConfiguration : IEntityTypeConfiguration<ServiceType>
     {
         _serviceTypeSettings = appSettings.Value.ServiceType;
     }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
+    }
+    
     public void Configure(EntityTypeBuilder<ServiceType> builder)
     {
         builder.HasKey(x => x.Id);

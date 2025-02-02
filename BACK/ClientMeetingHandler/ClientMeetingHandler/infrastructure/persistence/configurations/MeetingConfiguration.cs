@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class MeetingConfiguration : IEntityTypeConfiguration<Meeting>
+public class MeetingConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Meeting>
 {
     private readonly MeetingSettings _meetingSettings;
 
@@ -14,6 +14,12 @@ public class MeetingConfiguration : IEntityTypeConfiguration<Meeting>
     {
         _meetingSettings = appSettings.Value.Meeting;
     }
+    
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(this);
+    }
+    
     public void Configure(EntityTypeBuilder<Meeting> builder)
     {
         builder.HasKey(x => x.Id);
