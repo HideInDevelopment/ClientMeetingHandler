@@ -1,5 +1,7 @@
 using ClientMeetingHandler.application.settings;
 using ClientMeetingHandler.domain.entities;
+using ClientMeetingHandler.domain.repositories;
+using ClientMeetingHandler.domain.repositories.contracts;
 using ClientMeetingHandler.infrastructure.persistence;
 using ClientMeetingHandler.infrastructure.persistence.configurations;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +17,8 @@ public static class DependencyInjection
             options.UseSqlServer(configuration.GetConnectionString("Database")));
         
         // Repositories
+        services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+        services.AddScoped<IContactRepository, ContactRepository>();
         
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();

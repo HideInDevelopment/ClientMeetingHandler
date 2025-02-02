@@ -8,18 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="main - modification in DatabaseContext.cs to properly receive the IEntityConfiguration list.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/ContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/ContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/GenericRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +35,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/application/settings/AppSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/domain/enums/NoteType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -115,7 +108,7 @@
       <workItem from="1738349199196" duration="5574000" />
       <workItem from="1738408920648" duration="3091000" />
       <workItem from="1738433265535" duration="4524000" />
-      <workItem from="1738493196070" duration="1589000" />
+      <workItem from="1738493196070" duration="3879000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -165,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738435990832</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="main - modification in DatabaseContext.cs to properly receive the IEntityConfiguration list.">
+      <option name="closed" value="true" />
+      <created>1738495351941</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738495351941</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +182,7 @@
     <MESSAGE value="main - Localization.cs creation" />
     <MESSAGE value="main - Implements persistence layer with configuration to avoid magic numbers making them configurable." />
     <MESSAGE value="main - Create entityConfiguration. Encapsulate dependency injection logic in static class." />
-    <option name="LAST_COMMIT_MESSAGE" value="main - Create entityConfiguration. Encapsulate dependency injection logic in static class." />
+    <MESSAGE value="main - modification in DatabaseContext.cs to properly receive the IEntityConfiguration list." />
+    <option name="LAST_COMMIT_MESSAGE" value="main - modification in DatabaseContext.cs to properly receive the IEntityConfiguration list." />
   </component>
 </project>

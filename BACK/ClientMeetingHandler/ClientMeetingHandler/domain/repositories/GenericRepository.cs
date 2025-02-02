@@ -3,7 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClientMeetingHandler.domain.repositories;
 
-public class GenericRepository<TKey, TEntity> where TEntity : class
+public class GenericRepository<TKey, TEntity> : IGenericRepository<TKey, TEntity>
+    where TEntity : class
 {
     private readonly DatabaseContext _context;
     private readonly DbSet<TEntity> _entity;
