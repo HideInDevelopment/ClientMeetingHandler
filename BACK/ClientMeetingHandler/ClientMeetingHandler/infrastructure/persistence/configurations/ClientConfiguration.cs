@@ -23,6 +23,7 @@ public class ClientConfiguration : IEntityConfiguration, IEntityTypeConfiguratio
     public void Configure(EntityTypeBuilder<Client> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Name).IsRequired().HasMaxLength(_clientSettings.NameMaxLength);
         builder.Property(x => x.ContactId).IsRequired();

@@ -23,6 +23,7 @@ public class ContactConfiguration : IEntityConfiguration, IEntityTypeConfigurati
     public void Configure(EntityTypeBuilder<Contact> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Country).IsRequired().HasMaxLength(_contactSettings.CountryMaxLength);
         builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(_contactSettings.PhoneNumberMaxLength);

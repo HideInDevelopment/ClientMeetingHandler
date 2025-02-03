@@ -23,6 +23,7 @@ public class ServiceTypeConfiguration : IEntityConfiguration, IEntityTypeConfigu
     public void Configure(EntityTypeBuilder<ServiceType> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Name).IsRequired().HasMaxLength(_serviceTypeSettings.NameMaxLength);
         builder.Property(x => x.Description).IsRequired().HasMaxLength(_serviceTypeSettings.DescriptionMaxLength);

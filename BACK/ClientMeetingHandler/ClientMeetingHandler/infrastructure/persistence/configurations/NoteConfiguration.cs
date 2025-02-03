@@ -23,6 +23,7 @@ public class NoteConfiguration : IEntityConfiguration, IEntityTypeConfiguration<
     public void Configure(EntityTypeBuilder<Note> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Title).IsRequired().HasMaxLength(_noteSettings.TitleMaxLength);
         builder.Property(x => x.Content).IsRequired().HasMaxLength(_noteSettings.ContentMaxLength);

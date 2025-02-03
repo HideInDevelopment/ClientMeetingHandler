@@ -23,6 +23,7 @@ public class LocalizationConfiguration : IEntityConfiguration, IEntityTypeConfig
     public void Configure(EntityTypeBuilder<Localization> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Country).IsRequired().HasMaxLength(_localizationSettings.CountryMaxLength);
         builder.Property(x => x.City).IsRequired().HasMaxLength(_localizationSettings.CityMaxLength);

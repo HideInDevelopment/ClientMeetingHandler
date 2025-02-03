@@ -23,6 +23,7 @@ public class MeetingConfiguration : IEntityConfiguration, IEntityTypeConfigurati
     public void Configure(EntityTypeBuilder<Meeting> builder)
     {
         builder.HasKey(x => x.Id);
+        builder.Property(g => g.Id).ValueGeneratedOnAdd();
 
         builder.Property(x => x.Date).IsRequired();
         builder.Property(x => x.Duration).IsRequired().HasMaxLength(_meetingSettings.DurationMaxLength);
