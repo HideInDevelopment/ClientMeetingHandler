@@ -8,29 +8,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="main - ValueGeneratedOnAdd in Configurations">
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/IContactRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/AppSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/ClientSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/ContactSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/LocalizationSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/MeetingSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/NoteSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/ServiceSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/settings/ServiceTypeSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ContactConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/IEntityConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/LocalizationConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/MeetingConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/NoteConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ServiceTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Localization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Localization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Meeting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Meeting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Note.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Note.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/ServiceType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/ServiceType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/ContactRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/repositories/GenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/IGenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/IGenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/contracts/IContactRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/contracts/IHasEmailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/contracts/IHasEmail.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +126,8 @@
       <workItem from="1738604345381" duration="4998000" />
       <workItem from="1741536164737" duration="25000" />
       <workItem from="1741624654204" duration="392000" />
-      <workItem from="1743494282445" duration="611000" />
+      <workItem from="1743494282445" duration="702000" />
+      <workItem from="1743498160493" duration="4248000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -206,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738608656042</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Modification in domain structure.">
+      <option name="closed" value="true" />
+      <created>1743494917275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743494917275</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +228,7 @@
     <MESSAGE value="main - modification in DatabaseContext.cs to properly receive the IEntityConfiguration list." />
     <MESSAGE value="main - implementation of GenericRepository.cs, IGenericRepository.cs some specific but common contracts." />
     <MESSAGE value="main - ValueGeneratedOnAdd in Configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="main - ValueGeneratedOnAdd in Configurations" />
+    <MESSAGE value="Modification in domain structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification in domain structure." />
   </component>
 </project>

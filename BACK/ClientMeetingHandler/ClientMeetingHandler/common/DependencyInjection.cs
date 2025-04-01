@@ -3,7 +3,9 @@ using ClientMeetingHandler.domain.repositories;
 using ClientMeetingHandler.domain.repositories.contracts;
 using ClientMeetingHandler.infrastructure.persistence;
 using ClientMeetingHandler.infrastructure.persistence.configurations;
+using ClientMeetingHandler.infrastructure.repositories;
 using Microsoft.EntityFrameworkCore;
+using Contact = ClientMeetingHandler.domain.entities.Contact;
 
 namespace ClientMeetingHandler.common;
 
@@ -17,7 +19,6 @@ public static class DependencyInjection
         
         // Repositories
         services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
-        services.AddScoped<IContactRepository, ContactRepository>();
         
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();

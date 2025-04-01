@@ -1,6 +1,6 @@
 namespace ClientMeetingHandler.domain.repositories.contracts;
 
-public interface IHasEmailRepository<TEntity> where TEntity : class
+public interface IHasEmail<TEntity> where TEntity : class
 {
     Task<TEntity?> GetByEmail(string email);
 }

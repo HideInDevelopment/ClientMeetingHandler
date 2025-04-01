@@ -1,23 +1,12 @@
 namespace ClientMeetingHandler.domain.entities;
 
-public class Service
+public class Service : Entity<Guid>
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
-    public IReadOnlyCollection<Note> Notes { get; set; }
     public DateTime Date { get; set; }
     public DateTime Expiration { get; set; }
     public Guid ServiceTypeId { get; set; }
-
-    public Service(Guid id, string name, IReadOnlyCollection<Note> notes, DateTime date, DateTime expiration, Guid serviceTypeId)
-    {
-        Id = id;
-        Name = name;
-        Notes = notes;
-        Date = date;
-        Expiration = expiration;
-        ServiceTypeId = serviceTypeId;
-    }
-
-
+    
+    public virtual ServiceType ServiceType { get; set; }
+    public virtual List<Note> Notes { get; set; }
 }

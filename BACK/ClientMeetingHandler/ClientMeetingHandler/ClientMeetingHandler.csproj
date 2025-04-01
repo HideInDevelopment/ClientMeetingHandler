@@ -12,7 +12,6 @@
       <Folder Include="application\use-cases\" />
       <Folder Include="domain\services\" />
       <Folder Include="infrastructure\persistence\migrations\" />
-      <Folder Include="infrastructure\repositories\" />
       <Folder Include="presentation\controllers\" />
       <Folder Include="presentation\dtos\" />
     </ItemGroup>

@@ -1,19 +1,12 @@
 namespace ClientMeetingHandler.domain.entities;
 
-public class Meeting
+public class Meeting : Entity<Guid>
 {
-    public Guid Id { get; set; }
     public DateTime Date { get; set; }
     public int Duration { get; set; }
     public Guid LocalizationId { get; set; }
     public Guid ClientId { get; set; }
-
-    public Meeting(Guid id, DateTime date, int duration, Guid localizationId, Guid clientId)
-    {
-        Id = id;
-        Date = date;
-        Duration = duration;
-        LocalizationId = localizationId;
-        ClientId = clientId;
-    }
+    
+    public virtual Localization Localization { get; set; }
+    public virtual Client Client { get; set; }
 }
