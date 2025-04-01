@@ -1,8 +1,4 @@
-using ClientMeetingHandler.application.settings;
 using ClientMeetingHandler.common;
-using ClientMeetingHandler.domain.entities;
-using ClientMeetingHandler.infrastructure.persistence.configurations;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

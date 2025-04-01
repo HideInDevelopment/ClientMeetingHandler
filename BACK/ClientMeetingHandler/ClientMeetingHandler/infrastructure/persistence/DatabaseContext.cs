@@ -7,15 +7,7 @@ namespace ClientMeetingHandler.infrastructure.persistence;
 
 public class DatabaseContext : DbContext
 {
-    private readonly IEnumerable<IEntityConfiguration> _configurations;
-
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
-    
-    public DatabaseContext(DbContextOptions<DatabaseContext> options,
-        IEnumerable<IEntityConfiguration> configurations) : base(options)
-    {
-        _configurations = configurations;
-    }
     
     public DbSet<Client> Clients { get; set; }
     public DbSet<Contact> Contacts { get; set; }
@@ -27,11 +19,6 @@ public class DatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        foreach (var configuration in _configurations)
-        {
-            configuration.Configure(modelBuilder);
-        }
-        
         base.OnModelCreating(modelBuilder);
     }
 }

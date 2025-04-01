@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <Folder Include="application\services\" />
+      <Folder Include="application\settings\" />
       <Folder Include="application\use-cases\" />
       <Folder Include="domain\services\" />
       <Folder Include="infrastructure\persistence\migrations\" />

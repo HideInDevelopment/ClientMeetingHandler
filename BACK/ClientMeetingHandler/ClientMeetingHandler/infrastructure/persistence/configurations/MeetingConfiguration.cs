@@ -1,20 +1,11 @@
-using ClientMeetingHandler.application.settings;
 using ClientMeetingHandler.domain.entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Extensions.Options;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class MeetingConfiguration : IEntityConfiguration, IEntityTypeConfiguration<Meeting>
+public class MeetingConfiguration : IEntityTypeConfiguration<Meeting>
 {
-    private readonly MeetingSettings _meetingSettings;
-
-    public MeetingConfiguration(IOptions<AppSettings> appSettings)
-    {
-        _meetingSettings = appSettings.Value.Meeting;
-    }
-    
     public void Configure(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(this);
@@ -26,7 +17,7 @@ public class MeetingConfiguration : IEntityConfiguration, IEntityTypeConfigurati
         builder.Property(g => g.Id).ValueGeneratedOnAdd();
 
         builder.Property(x => x.Date).IsRequired();
-        builder.Property(x => x.Duration).IsRequired().HasMaxLength(_meetingSettings.DurationMaxLength);
+        builder.Property(x => x.Duration).IsRequired().HasMaxLength(10);
         builder.Property(x => x.LocalizationId).IsRequired();
         builder.Property(x => x.ClientId).IsRequired();
         
