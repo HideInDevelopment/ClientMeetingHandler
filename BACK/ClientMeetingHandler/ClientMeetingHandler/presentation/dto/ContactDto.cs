@@ -5,8 +5,21 @@ namespace ClientMeetingHandler.presentation.dtos;
 
 public class ContactDto : IDto, IMapToEntity<Contact>
 {
+    public Guid Id { get; set; }
+    public string Country { get; set; }
+    public int PhoneNumber { get; set; }
+    public string Email { get; set; }
+    public Guid ClientId { get; set; }
+    
     public Contact ToEntity()
     {
-        throw new NotImplementedException();
+        return new Contact()
+        {
+            Id = Id,
+            Country = Country,
+            PhoneNumber = PhoneNumber,
+            Email = Email,
+            ClientId = ClientId
+        };
     }
 }

@@ -8,16 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="Implements Services, implements mappers.">
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Contact.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Localization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Localization.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Meeting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Meeting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Note.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Note.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/repositories/contracts/IHasEmail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/common/contracts/IHasEmail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ClientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ClientDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ContactDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ContactDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/LocalizationDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/LocalizationDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/MeetingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/MeetingDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/NoteDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/NoteDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ServiceDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ServiceDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ServiceTypeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ServiceTypeDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +125,7 @@
       <workItem from="1741624654204" duration="392000" />
       <workItem from="1743494282445" duration="702000" />
       <workItem from="1743498160493" duration="4614000" />
-      <workItem from="1743869163081" duration="2902000" />
+      <workItem from="1743869163081" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -211,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743502840088</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implements Services, implements mappers.">
+      <option name="closed" value="true" />
+      <created>1743872316930</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743872316930</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +244,7 @@
     <MESSAGE value="main - ValueGeneratedOnAdd in Configurations" />
     <MESSAGE value="Modification in domain structure." />
     <MESSAGE value="Repository logic modified and complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Repository logic modified and complete." />
+    <MESSAGE value="Implements Services, implements mappers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements Services, implements mappers." />
   </component>
 </project>

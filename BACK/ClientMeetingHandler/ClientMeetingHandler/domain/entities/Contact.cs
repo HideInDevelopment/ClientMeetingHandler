@@ -14,6 +14,13 @@ public class Contact : Entity<Guid>, IMapToDto<ContactDto>
     
     public ContactDto ToDto()
     {
-        throw new NotImplementedException();
+        return new ContactDto()
+        {
+            Id = Id,
+            Country = Country,
+            PhoneNumber = PhoneNumber,
+            Email = Email,
+            ClientId = ClientId
+        };
     }
 }

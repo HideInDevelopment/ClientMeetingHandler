@@ -5,8 +5,21 @@ namespace ClientMeetingHandler.presentation.dto;
 
 public class ServiceDto : IDto, IMapToEntity<Service>
 {
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public DateTime Date { get; set; }
+    public DateTime Expiration { get; set; }
+    public Guid ServiceTypeId { get; set; }
+    
     public Service ToEntity()
     {
-        throw new NotImplementedException();
+        return new Service()
+        {
+            Id = Id,
+            Name = Name,
+            Date = Date,
+            Expiration = Expiration,
+            ServiceTypeId = ServiceTypeId,
+        };
     }
 }

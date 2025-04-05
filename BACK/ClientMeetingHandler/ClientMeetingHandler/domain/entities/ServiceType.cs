@@ -13,6 +13,13 @@ public class ServiceType : Entity<Guid>, IMapToDto<ServiceTypeDto>
     
     public ServiceTypeDto ToDto()
     {
-        throw new NotImplementedException();
+        return new ServiceTypeDto()
+        {
+            Id = Id,
+            Name = Name,
+            Description = Description,
+            Price = Price,
+            Sessions = Sessions,
+        };
     }
 }

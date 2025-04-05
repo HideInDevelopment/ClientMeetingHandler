@@ -5,8 +5,15 @@ namespace ClientMeetingHandler.presentation.dto;
 
 public class ClientDto : IDto, IMapToEntity<Client>
 {
+    public Guid Id { get; set; }
+    public Guid ContactId { get; set; }
+    
     public Client ToEntity()
     {
-        throw new NotImplementedException();
+        return new Client()
+        {
+            Id = Id,
+            ContactId = ContactId,
+        };
     }
 }

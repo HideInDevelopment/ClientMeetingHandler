@@ -13,6 +13,12 @@ public class Localization : Entity<Guid>, IMapToDto<LocalizationDto>
     
     public LocalizationDto ToDto()
     {
-        throw new NotImplementedException();
+        return new LocalizationDto()
+        {
+            Id = Id,
+            Country = Country,
+            City = City,
+            Street = Street
+        };
     }
 }

@@ -15,6 +15,13 @@ public class Meeting : Entity<Guid>, IMapToDto<MeetingDto>
     
     public MeetingDto ToDto()
     {
-        throw new NotImplementedException();
+        return new MeetingDto()
+        {
+            Id = Id,
+            Date = Date,
+            Duration = Duration,
+            LocalizationId = LocalizationId,
+            ClientId = ClientId,
+        };
     }
 }

@@ -14,6 +14,10 @@ public class Client : Entity<Guid>, IMapToDto<ClientDto>
     
     public ClientDto ToDto()
     {
-        throw new NotImplementedException();
+        return new ClientDto()
+        {
+            Id = Id,
+            ContactId = ContactId,
+        };
     }
 }

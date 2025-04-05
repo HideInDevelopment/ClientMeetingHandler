@@ -15,6 +15,13 @@ public class Note : Entity<Guid>, IMapToDto<NoteDto>
     
     public NoteDto ToDto()
     {
-        throw new NotImplementedException();
+        return new NoteDto()
+        {
+            Id = Id,
+            Title = Title,
+            Content = Content,
+            NoteType = NoteType,
+            ServiceId = ServiceId,
+        };
     }
 }

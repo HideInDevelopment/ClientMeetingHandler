@@ -15,6 +15,13 @@ public class Service : Entity<Guid>, IMapToDto<ServiceDto>
     
     public ServiceDto ToDto()
     {
-        throw new NotImplementedException();
+        return new ServiceDto()
+        {
+            Id = Id,
+            Name = Name,
+            Date = Date,
+            Expiration = Expiration,
+            ServiceTypeId = ServiceTypeId,
+        };
     }
 }
