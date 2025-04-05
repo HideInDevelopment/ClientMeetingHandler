@@ -11,6 +11,7 @@ namespace ClientMeetingHandler.application.services;
 public class ClientService : IClientService
 {
     private readonly IClientRepository _clientRepository;
+    private readonly IContactRepository _contactRepository;
     private readonly ClientMapper _clientMapper;
 
     public ClientService(IClientRepository clientRepository, ClientMapper clientMapper)

@@ -8,16 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="Implementation of entity and dto inside mappers.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/common/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/repositories/GenericRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ClientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/ClientDto.cs" afterDir="false" />
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="Code improvements and modifications.">
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +32,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/domain/entities/Client.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/domain/entities/Client.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/domain/enums/NoteType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -121,7 +114,7 @@
       <workItem from="1741624654204" duration="392000" />
       <workItem from="1743494282445" duration="702000" />
       <workItem from="1743498160493" duration="4614000" />
-      <workItem from="1743869163081" duration="6741000" />
+      <workItem from="1743869163081" duration="7414000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -227,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743873165604</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Code improvements and modifications.">
+      <option name="closed" value="true" />
+      <created>1743876576977</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743876576977</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +251,7 @@
     <MESSAGE value="Repository logic modified and complete." />
     <MESSAGE value="Implements Services, implements mappers." />
     <MESSAGE value="Implementation of entity and dto inside mappers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementation of entity and dto inside mappers." />
+    <MESSAGE value="Code improvements and modifications." />
+    <option name="LAST_COMMIT_MESSAGE" value="Code improvements and modifications." />
   </component>
 </project>
