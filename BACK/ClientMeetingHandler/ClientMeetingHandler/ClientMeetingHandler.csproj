@@ -8,12 +8,9 @@
 
     <ItemGroup>
       <Folder Include="application\services\" />
-      <Folder Include="application\settings\" />
       <Folder Include="application\use-cases\" />
-      <Folder Include="domain\services\" />
       <Folder Include="infrastructure\persistence\migrations\" />
       <Folder Include="presentation\controllers\" />
-      <Folder Include="presentation\dtos\" />
     </ItemGroup>
 
     <ItemGroup>

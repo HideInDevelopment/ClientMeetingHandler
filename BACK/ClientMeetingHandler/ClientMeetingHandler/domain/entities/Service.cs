@@ -1,6 +1,9 @@
+using ClientMeetingHandler.common.contracts;
+using ClientMeetingHandler.presentation.dto;
+
 namespace ClientMeetingHandler.domain.entities;
 
-public class Service : Entity<Guid>
+public class Service : Entity<Guid>, IMapToDto<ServiceDto>
 {
     public string Name { get; set; }
     public DateTime Date { get; set; }
@@ -9,4 +12,9 @@ public class Service : Entity<Guid>
     
     public virtual ServiceType ServiceType { get; set; }
     public virtual List<Note> Notes { get; set; }
+    
+    public ServiceDto ToDto()
+    {
+        throw new NotImplementedException();
+    }
 }
