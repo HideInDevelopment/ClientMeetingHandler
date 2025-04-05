@@ -14,7 +14,7 @@ public class Entity<TKey>
     public static bool operator ==(Entity<TKey>? left, Entity<TKey>? right) => 
         ReferenceEquals(left, right) || left is not null && left.Equals(right);
     
-    public static bool operator !=(Entity<TKey> left, Entity<TKey> right) => !(left == right);
+    public static bool operator !=(Entity<TKey>? left, Entity<TKey>? right) => !(left == right);
     
     public override int GetHashCode()
     {

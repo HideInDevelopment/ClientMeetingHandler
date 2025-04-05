@@ -6,13 +6,16 @@ namespace ClientMeetingHandler.presentation.dto;
 public class ClientDto : IDto, IMapToEntity<Client>
 {
     public Guid Id { get; set; }
+    public string Name { get; set; }
     public Guid ContactId { get; set; }
+    
     
     public Client ToEntity()
     {
         return new Client()
         {
             Id = Id,
+            Name = Name,
             ContactId = ContactId,
         };
     }

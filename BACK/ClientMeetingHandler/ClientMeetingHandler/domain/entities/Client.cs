@@ -17,7 +17,8 @@ public class Client : Entity<Guid>, IMapToDto<ClientDto>
         return new ClientDto()
         {
             Id = Id,
-            ContactId = ContactId,
+            Name = Name,
+            ContactId = ContactId
         };
     }
 }

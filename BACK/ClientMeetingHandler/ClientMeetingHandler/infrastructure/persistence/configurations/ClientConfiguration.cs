@@ -26,6 +26,4 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         builder.HasMany<Meeting>().WithOne().HasForeignKey(x => x.Id);
         builder.HasMany<Service>().WithOne().HasForeignKey(x => x.Id);
     }
-
-
 }

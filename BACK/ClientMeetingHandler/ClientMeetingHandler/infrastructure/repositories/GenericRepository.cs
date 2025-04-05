@@ -20,16 +20,12 @@ public class GenericRepository<TKey, TEntity> : IGenericRepository<TKey, TEntity
 
     public Task<IQueryable<TEntity>> GetAllAsync()
     {
-        IQueryable<TEntity> query = _entity.AsSplitQuery();
+        var query = _entity.AsSplitQuery();
 
         return Task.FromResult(query);
     }
 
-    public async Task<TEntity?> GetByIdAsync(TKey id)
-    {
-        var entityItems = await GetAllAsync();
-        return entityItems.FirstOrDefault(x => x.Id != null && x.Id.Equals(id)) ?? null;
-    }
+    public async Task<TEntity?> GetByIdAsync(TKey id) => await _entity.FindAsync(id);
 
     public async Task AddAsync(TEntity entity)
     {

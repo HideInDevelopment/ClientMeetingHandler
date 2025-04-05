@@ -1,6 +1,7 @@
+using ClientMeetingHandler.application.services;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.repositories;
-using ClientMeetingHandler.domain.repositories.contracts;
+using ClientMeetingHandler.domain.services;
 using ClientMeetingHandler.infrastructure.persistence;
 using ClientMeetingHandler.infrastructure.persistence.configurations;
 using ClientMeetingHandler.infrastructure.repositories;
@@ -19,6 +20,17 @@ public static class DependencyInjection
         
         // Repositories
         services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+        services.AddScoped<IClientRepository, ClientRepository>();
+        services.AddScoped<IContactRepository, ContactRepository>();
+        services.AddScoped<ILocalizationRepository, LocalizationRepository>();
+        services.AddScoped<IMeetingRepository, MeetingRepository>();
+        services.AddScoped<INoteRepository, NoteRepository>();
+        services.AddScoped<IServiceRepository, ServiceRepository>();
+        services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
+        
+        // Services
+        services.AddScoped<IClientService, ClientService>();
+        
         
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();
