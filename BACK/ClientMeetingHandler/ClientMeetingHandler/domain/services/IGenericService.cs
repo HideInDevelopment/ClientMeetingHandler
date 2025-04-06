@@ -12,6 +12,6 @@ public interface IGenericService<in TKey, TDto>
     Task DeleteAsync(TKey id);
     
     // Functions for dynamic includes
-    Task<IEnumerable<TDto?>> GetQueryWithIncludesAsync();
-    Task<TDto?> GetSingleWithIncludesAsync(TKey id);
+    Task<IEnumerable<TDto?>> GetAllWithIncludesAsync();
+    Task<TDto?> GetByIdWithIncludesAsync(TKey id);
 }

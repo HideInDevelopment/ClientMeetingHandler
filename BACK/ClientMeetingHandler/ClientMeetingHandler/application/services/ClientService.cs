@@ -60,13 +60,13 @@ public class ClientService : IClientService
 
     public async Task DeleteAsync(Guid id) => await _clientRepository.DeleteAsync(id);
     
-    public async Task<IEnumerable<IDto?>> GetQueryWithIncludesAsync()
+    public async Task<IEnumerable<IDto?>> GetAllWithIncludesAsync()
     {
         var queryableClientsWithIncludes = await _clientRepository.GetQueryWithIncludesAsync(_clientIncludes);
         return queryableClientsWithIncludes.ToList().Select(_clientMapper.MapDetailEntityToDetailDto);
     }
 
-    public async Task<IDto?> GetSingleWithIncludesAsync(Guid id)
+    public async Task<IDto?> GetByIdWithIncludesAsync(Guid id)
     {
         var storedClientWithIncludes = await _clientRepository.GetSingleWithIncludesAsync(x => x.Id.Equals(id), _clientIncludes);
         return storedClientWithIncludes == null ? null : _clientMapper.MapDetailEntityToDetailDto(storedClientWithIncludes);

@@ -17,8 +17,8 @@ public class ClientController : ControllerBase
     {
         _clientService = clientService;
     }
-
-    [HttpGet()]
+    
+    [HttpGet("simple")]
     public async Task<ActionResult> Get()
     {
         var response = await _clientService.GetAllAsync();
@@ -31,10 +31,36 @@ public class ClientController : ControllerBase
         return Ok(response);
     }
 
-    [HttpGet("{key:guid}")]
+    [HttpGet("simple/{key:guid}")]
     public async Task<ActionResult> Get([FromRoute] Guid key)
     {
         var response = await _clientService.GetByIdAsync(key);
+
+        if (EntityValidator.IsNullOrDefault(response))
+        {
+            return NotFound("Client doesn't exist yet.");
+        }
+        
+        return Ok(response);
+    }
+    
+    [HttpGet("detail")]
+    public async Task<ActionResult> GetDetail()
+    {
+        var response = await _clientService.GetAllWithIncludesAsync();
+
+        if (ListValidator.IsNullOrEmpty(response))
+        {
+            return NotFound();
+        }
+
+        return Ok(response);
+    }
+
+    [HttpGet("detail/{key:guid}")]
+    public async Task<ActionResult> GetDetail([FromRoute] Guid key)
+    {
+        var response = await _clientService.GetByIdWithIncludesAsync(key);
 
         if (EntityValidator.IsNullOrDefault(response))
         {
