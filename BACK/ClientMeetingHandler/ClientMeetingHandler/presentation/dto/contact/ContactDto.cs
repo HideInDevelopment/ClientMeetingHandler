@@ -1,7 +1,7 @@
 using ClientMeetingHandler.common.contracts;
 using ClientMeetingHandler.domain.entities;
 
-namespace ClientMeetingHandler.presentation.dtos;
+namespace ClientMeetingHandler.presentation.dto.contact;
 
 public class ContactDto : IDto, IMapToEntity<Contact>
 {

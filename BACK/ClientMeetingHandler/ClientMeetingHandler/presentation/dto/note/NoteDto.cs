@@ -2,7 +2,7 @@ using ClientMeetingHandler.common.contracts;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.enums;
 
-namespace ClientMeetingHandler.presentation.dto;
+namespace ClientMeetingHandler.presentation.dto.note;
 
 public class NoteDto : IDto, IMapToEntity<Note>
 {

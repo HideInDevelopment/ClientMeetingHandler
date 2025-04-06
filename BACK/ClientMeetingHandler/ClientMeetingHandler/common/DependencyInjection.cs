@@ -22,7 +22,7 @@ public static class DependencyInjection
         services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
         services.AddScoped<IClientRepository, ClientRepository>();
         services.AddScoped<IContactRepository, ContactRepository>();
-        services.AddScoped<ILocalizationRepository, LocalizationRepository>();
+        services.AddScoped<ILocationRepository, LocationRepository>();
         services.AddScoped<IMeetingRepository, MeetingRepository>();
         services.AddScoped<INoteRepository, NoteRepository>();
         services.AddScoped<IServiceRepository, ServiceRepository>();
@@ -35,7 +35,7 @@ public static class DependencyInjection
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();
         services.AddScoped<IEntityTypeConfiguration<Contact>, ContactConfiguration>();
-        services.AddScoped<IEntityTypeConfiguration<Localization>, LocalizationConfiguration>();
+        services.AddScoped<IEntityTypeConfiguration<Location>, LocationConfiguration>();
         services.AddScoped<IEntityTypeConfiguration<Meeting>, MeetingConfiguration>();
         services.AddScoped<IEntityTypeConfiguration<Note>, NoteConfiguration>();
         services.AddScoped<IEntityTypeConfiguration<Service>, ServiceConfiguration>();

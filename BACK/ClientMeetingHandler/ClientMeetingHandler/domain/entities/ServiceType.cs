@@ -1,6 +1,5 @@
-using System.Runtime.CompilerServices;
 using ClientMeetingHandler.common.contracts;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.serviceType;
 
 namespace ClientMeetingHandler.domain.entities;
 

@@ -2,7 +2,7 @@ using ClientMeetingHandler.common.Validators;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.exceptions;
 using ClientMeetingHandler.domain.services;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.client;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClientMeetingHandler.presentation.controllers;

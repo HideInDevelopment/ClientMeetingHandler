@@ -1,5 +1,5 @@
 using ClientMeetingHandler.domain.entities;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.meeting;
 
 namespace ClientMeetingHandler.application.mappings;
 

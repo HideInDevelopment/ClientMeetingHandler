@@ -4,7 +4,7 @@ using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.exceptions;
 using ClientMeetingHandler.domain.repositories;
 using ClientMeetingHandler.domain.services;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.client;
 
 namespace ClientMeetingHandler.application.services;
 

@@ -1,6 +1,5 @@
-using ClientMeetingHandler.common.contracts;
 using ClientMeetingHandler.domain.entities;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.client;
 
 namespace ClientMeetingHandler.application.mappings;
 

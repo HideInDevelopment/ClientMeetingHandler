@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
-public class LocalizationConfiguration : IEntityTypeConfiguration<Localization>
+public class LocationConfiguration : IEntityTypeConfiguration<Location>
 {
     public void Configure(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(this);
     }
     
-    public void Configure(EntityTypeBuilder<Localization> builder)
+    public void Configure(EntityTypeBuilder<Location> builder)
     {
         builder.HasKey(x => x.Id);
         builder.Property(g => g.Id).ValueGeneratedOnAdd();
@@ -20,6 +20,6 @@ public class LocalizationConfiguration : IEntityTypeConfiguration<Localization>
         builder.Property(x => x.City).IsRequired().HasMaxLength(100);
         builder.Property(x => x.Street).IsRequired().HasMaxLength(250);
         
-        builder.HasIndex(x => x.Id).HasDatabaseName("IX_Localization_Id");
+        builder.HasIndex(x => x.Id).HasDatabaseName("IX_Location_Id");
     }
 }

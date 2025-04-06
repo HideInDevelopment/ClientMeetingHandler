@@ -1,5 +1,4 @@
 using ClientMeetingHandler.common.contracts;
-using ClientMeetingHandler.presentation.dto;
 
 namespace ClientMeetingHandler.application.mappings;
 

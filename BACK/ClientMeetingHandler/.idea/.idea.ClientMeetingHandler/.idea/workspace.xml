@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="Code improvements and modifications.">
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" afterDir="false" />
-    </list>
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ClientMeetingHandler: http">
     <configuration name="ClientMeetingHandler: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ClientMeetingHandler/ClientMeetingHandler.csproj" />
@@ -114,7 +112,7 @@
       <workItem from="1741624654204" duration="392000" />
       <workItem from="1743494282445" duration="702000" />
       <workItem from="1743498160493" duration="4614000" />
-      <workItem from="1743869163081" duration="7414000" />
+      <workItem from="1743869163081" duration="8135000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -228,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743876576977</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Modifications in ClientService.cs">
+      <option name="closed" value="true" />
+      <created>1743877396885</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743877396885</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +258,7 @@
     <MESSAGE value="Implements Services, implements mappers." />
     <MESSAGE value="Implementation of entity and dto inside mappers." />
     <MESSAGE value="Code improvements and modifications." />
-    <option name="LAST_COMMIT_MESSAGE" value="Code improvements and modifications." />
+    <MESSAGE value="Modifications in ClientService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifications in ClientService.cs" />
   </component>
 </project>

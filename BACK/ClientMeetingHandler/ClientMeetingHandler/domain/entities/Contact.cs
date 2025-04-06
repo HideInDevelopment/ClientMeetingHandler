@@ -1,5 +1,5 @@
 using ClientMeetingHandler.common.contracts;
-using ClientMeetingHandler.presentation.dtos;
+using ClientMeetingHandler.presentation.dto.contact;
 
 namespace ClientMeetingHandler.domain.entities;
 

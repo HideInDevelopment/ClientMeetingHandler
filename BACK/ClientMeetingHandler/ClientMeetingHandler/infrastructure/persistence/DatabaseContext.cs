@@ -11,7 +11,7 @@ public class DatabaseContext : DbContext
     
     public DbSet<Client> Clients { get; set; }
     public DbSet<Contact> Contacts { get; set; }
-    public DbSet<Localization> Localizations { get; set; }
+    public DbSet<Location> Locations { get; set; }
     public DbSet<Meeting> Meetings { get; set; }
     public DbSet<Note> Notes { get; set; }
     public DbSet<Service> Services { get; set; }

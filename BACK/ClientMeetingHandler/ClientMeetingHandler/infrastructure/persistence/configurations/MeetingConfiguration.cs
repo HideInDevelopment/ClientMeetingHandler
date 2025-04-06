@@ -27,6 +27,6 @@ public class MeetingConfiguration : IEntityTypeConfiguration<Meeting>
         builder.HasIndex(x => new { x.Id, x.ClientId, x.LocalizationId })
             .HasDatabaseName("IX_Client_Localization_Meeting_Id");
 
-        builder.HasOne<Localization>().WithOne().HasForeignKey<Meeting>(x => x.LocalizationId);
+        builder.HasOne<Location>().WithOne().HasForeignKey<Meeting>(x => x.LocalizationId);
     }
 }

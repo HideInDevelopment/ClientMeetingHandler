@@ -1,6 +1,6 @@
 using ClientMeetingHandler.common.contracts;
 using ClientMeetingHandler.domain.enums;
-using ClientMeetingHandler.presentation.dto;
+using ClientMeetingHandler.presentation.dto.note;
 
 namespace ClientMeetingHandler.domain.entities;
 

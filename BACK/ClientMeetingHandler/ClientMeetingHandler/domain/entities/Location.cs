@@ -1,17 +1,19 @@
 using ClientMeetingHandler.common.contracts;
-using ClientMeetingHandler.domain.entities;
+using ClientMeetingHandler.presentation.dto.location;
 
-namespace ClientMeetingHandler.presentation.dto;
+namespace ClientMeetingHandler.domain.entities;
 
-public class LocalizationDto : IDto, IMapToEntity<Localization>
+public class Location : Entity<Guid>, IMapToDto<LocationDto>
 {
-    public Guid Id { get; set; }
     public string Country { get; set; }
     public string City { get; set; }
     public string Street { get; set; }
-    public Localization ToEntity()
+    
+    public virtual List<Meeting> Meetings { get; set; }
+    
+    public LocationDto ToDto()
     {
-        return new Localization()
+        return new LocationDto()
         {
             Id = Id,
             Country = Country,
