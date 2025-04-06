@@ -1,3 +1,4 @@
+using ClientMeetingHandler.application.mappings;
 using ClientMeetingHandler.application.services;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.repositories;
@@ -28,9 +29,17 @@ public static class DependencyInjection
         services.AddScoped<IServiceRepository, ServiceRepository>();
         services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
         
+        // Mappers
+        services.AddScoped<ClientMapper>();
+        services.AddScoped<ContactMapper>();
+        services.AddScoped<LocationMapper>();
+        services.AddScoped<MeetingMapper>();
+        services.AddScoped<NoteMapper>();
+        services.AddScoped<ServiceMapper>();
+        services.AddScoped<ServiceTypeMapper>();
+        
         // Services
         services.AddScoped<IClientService, ClientService>();
-        
         
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();

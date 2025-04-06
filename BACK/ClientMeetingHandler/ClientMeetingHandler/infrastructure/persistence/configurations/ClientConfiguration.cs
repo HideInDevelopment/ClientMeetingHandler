@@ -22,7 +22,7 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Client_Id");
         builder.HasIndex(x => new { x.Id, x.ContactId }).HasDatabaseName("IX_Contact_Client_Id");
         
-        builder.HasOne<Contact>().WithMany().HasForeignKey(x => x.ContactId);
+        builder.HasOne(c => c.Contact).WithOne(c => c.Client).HasForeignKey<Contact>(c => c.Id).OnDelete(DeleteBehavior.Cascade);
         builder.HasMany<Meeting>().WithOne().HasForeignKey(x => x.Id);
         builder.HasMany<Service>().WithOne().HasForeignKey(x => x.Id);
     }
