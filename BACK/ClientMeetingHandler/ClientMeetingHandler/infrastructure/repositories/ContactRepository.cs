@@ -23,9 +23,9 @@ public class ContactRepository : IContactRepository
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
     
-    public Task<IQueryable<Contact>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+    public Task<IQueryable<Contact>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public Task<Contact?> GetSingleWithIncludesAsync(Expression<Func<Contact, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+    public Task<Contact?> GetSingleWithIncludesAsync(Expression<Func<Contact, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 
     public async Task<Contact?> GetByEmail(string email)
     {

@@ -13,7 +13,7 @@ public class ServiceTypeDto : IDto, IMapToEntity<ServiceType>
     
     public ServiceType ToEntity()
     {
-        return new ServiceType()
+        return new ServiceType
         {
             Id = Id,
             Name = Name,

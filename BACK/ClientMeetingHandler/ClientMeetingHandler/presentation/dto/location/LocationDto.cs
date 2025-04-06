@@ -11,7 +11,7 @@ public class LocationDto : IDto, IMapToEntity<Location>
     public string Street { get; set; }
     public Location ToEntity()
     {
-        return new Location()
+        return new Location
         {
             Id = Id,
             Country = Country,

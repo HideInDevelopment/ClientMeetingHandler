@@ -15,7 +15,7 @@ public class Service : Entity<Guid>, IMapToDto<ServiceDto>
     
     public ServiceDto ToDto()
     {
-        return new ServiceDto()
+        return new ServiceDto
         {
             Id = Id,
             Name = Name,

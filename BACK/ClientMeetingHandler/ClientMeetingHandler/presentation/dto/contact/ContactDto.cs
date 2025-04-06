@@ -13,7 +13,7 @@ public class ContactDto : IDto, IMapToEntity<Contact>
     
     public Contact ToEntity()
     {
-        return new Contact()
+        return new Contact
         {
             Id = Id,
             Country = Country,

@@ -23,7 +23,7 @@ public class ServiceRepository : IServiceRepository
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
     
-    public Task<IQueryable<Service>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+    public Task<IQueryable<Service>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public Task<Service?> GetSingleWithIncludesAsync(Expression<Func<Service, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+    public Task<Service?> GetSingleWithIncludesAsync(Expression<Func<Service, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 }

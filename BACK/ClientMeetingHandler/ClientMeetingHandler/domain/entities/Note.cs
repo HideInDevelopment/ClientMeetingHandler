@@ -15,7 +15,7 @@ public class Note : Entity<Guid>, IMapToDto<NoteDto>
     
     public NoteDto ToDto()
     {
-        return new NoteDto()
+        return new NoteDto
         {
             Id = Id,
             Title = Title,

@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using ClientMeetingHandler.application.mappings;
 using ClientMeetingHandler.common.contracts;
 using ClientMeetingHandler.domain.entities;
@@ -11,8 +12,8 @@ namespace ClientMeetingHandler.application.services;
 public class ClientService : IClientService
 {
     private readonly IClientRepository _clientRepository;
-    private readonly IContactRepository _contactRepository;
     private readonly ClientMapper _clientMapper;
+    private readonly List<string> _clientIncludes = ["Contact", "Meetings", "Services"];
 
     public ClientService(IClientRepository clientRepository, ClientMapper clientMapper)
     {
@@ -58,4 +59,16 @@ public class ClientService : IClientService
     }
 
     public async Task DeleteAsync(Guid id) => await _clientRepository.DeleteAsync(id);
+    
+    public async Task<IEnumerable<IDto?>> GetQueryWithIncludesAsync()
+    {
+        var queryableClientsWithIncludes = await _clientRepository.GetQueryWithIncludesAsync(_clientIncludes);
+        return queryableClientsWithIncludes.ToList().Select(_clientMapper.MapDetailEntityToDetailDto);
+    }
+
+    public async Task<IDto?> GetSingleWithIncludesAsync(Guid id)
+    {
+        var storedClientWithIncludes = await _clientRepository.GetSingleWithIncludesAsync(x => x.Id.Equals(id), _clientIncludes);
+        return storedClientWithIncludes == null ? null : _clientMapper.MapDetailEntityToDetailDto(storedClientWithIncludes);
+    }
 }

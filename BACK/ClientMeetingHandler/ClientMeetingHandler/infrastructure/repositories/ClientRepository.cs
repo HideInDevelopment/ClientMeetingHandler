@@ -22,7 +22,7 @@ public class ClientRepository : IClientRepository
     public Task UpdateAsync(Client entity) => _repository.UpdateAsync(entity);
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
-    public Task<IQueryable<Client>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+    public Task<IQueryable<Client>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public Task<Client?> GetSingleWithIncludesAsync(Expression<Func<Client, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+    public Task<Client?> GetSingleWithIncludesAsync(Expression<Func<Client, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 }

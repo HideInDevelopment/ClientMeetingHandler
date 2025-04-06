@@ -14,7 +14,7 @@ public class Contact : Entity<Guid>, IMapToDto<ContactDto>
     
     public ContactDto ToDto()
     {
-        return new ContactDto()
+        return new ContactDto
         {
             Id = Id,
             Country = Country,

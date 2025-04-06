@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace ClientMeetingHandler.domain.services;
 
 public interface IGenericService<in TKey, TDto>
@@ -8,4 +10,8 @@ public interface IGenericService<in TKey, TDto>
     Task AddAsync(TDto dto);
     Task UpdateAsync(TDto dto);
     Task DeleteAsync(TKey id);
+    
+    // Functions for dynamic includes
+    Task<IEnumerable<TDto?>> GetQueryWithIncludesAsync();
+    Task<TDto?> GetSingleWithIncludesAsync(TKey id);
 }

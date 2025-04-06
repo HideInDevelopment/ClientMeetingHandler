@@ -23,7 +23,7 @@ public class LocationRepository: ILocationRepository
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
     
-    public Task<IQueryable<Location>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+    public Task<IQueryable<Location>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public Task<Location?> GetSingleWithIncludesAsync(Expression<Func<Location, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+    public Task<Location?> GetSingleWithIncludesAsync(Expression<Func<Location, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 }

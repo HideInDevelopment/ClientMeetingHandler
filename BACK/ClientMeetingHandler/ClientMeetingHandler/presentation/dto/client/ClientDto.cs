@@ -12,7 +12,7 @@ public class ClientDto : IDto, IMapToEntity<Client>
     
     public Client ToEntity()
     {
-        return new Client()
+        return new Client
         {
             Id = Id,
             Name = Name,

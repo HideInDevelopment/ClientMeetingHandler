@@ -23,7 +23,7 @@ public class MeetingRepository: IMeetingRepository
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
     
-    public Task<IQueryable<Meeting>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+    public Task<IQueryable<Meeting>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public Task<Meeting?> GetSingleWithIncludesAsync(Expression<Func<Meeting, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+    public Task<Meeting?> GetSingleWithIncludesAsync(Expression<Func<Meeting, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 }

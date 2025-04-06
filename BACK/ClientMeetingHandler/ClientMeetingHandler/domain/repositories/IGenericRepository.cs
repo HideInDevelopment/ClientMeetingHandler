@@ -12,6 +12,6 @@ public interface IGenericRepository<TKey, TEntity> where TEntity : class
     Task DeleteAsync(TKey key);
     
     // Functions for dynamic includes
-    Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(params string[] includes);
-    Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, params string[] includes);
+    Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(IEnumerable<string> includes);
+    Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, IEnumerable<string> includes);
 }

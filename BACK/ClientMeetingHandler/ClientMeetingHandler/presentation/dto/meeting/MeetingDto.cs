@@ -13,7 +13,7 @@ public class MeetingDto : IDto, IMapToEntity<Meeting>
     
     public Meeting ToEntity()
     {
-        return new Meeting()
+        return new Meeting
         {
             Id = Id,
             Date = Date,

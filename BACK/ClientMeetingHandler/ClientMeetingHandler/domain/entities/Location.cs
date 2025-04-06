@@ -13,7 +13,7 @@ public class Location : Entity<Guid>, IMapToDto<LocationDto>
     
     public LocationDto ToDto()
     {
-        return new LocationDto()
+        return new LocationDto
         {
             Id = Id,
             Country = Country,

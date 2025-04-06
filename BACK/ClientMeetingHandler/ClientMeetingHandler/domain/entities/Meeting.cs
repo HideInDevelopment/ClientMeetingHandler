@@ -15,7 +15,7 @@ public class Meeting : Entity<Guid>, IMapToDto<MeetingDto>
     
     public MeetingDto ToDto()
     {
-        return new MeetingDto()
+        return new MeetingDto
         {
             Id = Id,
             Date = Date,

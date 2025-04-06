@@ -12,7 +12,7 @@ public class ServiceType : Entity<Guid>, IMapToDto<ServiceTypeDto>
     
     public ServiceTypeDto ToDto()
     {
-        return new ServiceTypeDto()
+        return new ServiceTypeDto
         {
             Id = Id,
             Name = Name,

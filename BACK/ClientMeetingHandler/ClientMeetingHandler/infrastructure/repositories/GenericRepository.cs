@@ -69,7 +69,7 @@ public class GenericRepository<TKey, TEntity> : IGenericRepository<TKey, TEntity
         }
     }
 
-    public Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(params string[] includes)
+    public Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(IEnumerable<string> includes)
     {
         var query = _entity.AsSplitQuery();
 
@@ -78,7 +78,7 @@ public class GenericRepository<TKey, TEntity> : IGenericRepository<TKey, TEntity
         return Task.FromResult(query);
     }
 
-    public async Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, params string[] includes)
+    public async Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, IEnumerable<string> includes)
     {
         var query = await GetQueryWithIncludesAsync(includes);
         return await query.FirstOrDefaultAsync(predicate);
