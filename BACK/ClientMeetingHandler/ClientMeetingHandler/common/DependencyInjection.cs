@@ -17,7 +17,7 @@ public static class DependencyInjection
     {
         //DatabaseContext
         services.AddDbContext<DatabaseContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("Database")));
+            options.UseSqlServer(configuration.GetConnectionString("ClientMeetingHandler")));
         
         // Repositories
         services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));

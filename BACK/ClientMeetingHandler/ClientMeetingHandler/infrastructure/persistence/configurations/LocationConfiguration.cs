@@ -21,5 +21,7 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
         builder.Property(x => x.Street).IsRequired().HasMaxLength(250);
         
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Location_Id");
+        
+        builder.ToTable("Locations", "ClientMeetingHandler");
     }
 }

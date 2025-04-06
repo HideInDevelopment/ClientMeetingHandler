@@ -22,5 +22,12 @@ public class ServiceTypeConfiguration : IEntityTypeConfiguration<ServiceType>
         builder.Property(x => x.Sessions).IsRequired().HasMaxLength(10);
         
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_ServiceType_Id");
+
+        builder.HasMany<Service>()
+            .WithOne(s => s.ServiceType)
+            .HasForeignKey(s => s.ServiceTypeId)
+            .OnDelete(DeleteBehavior.NoAction);
+        
+        builder.ToTable("ServiceTypes", "ClientMeetingHandler");
     }
 }

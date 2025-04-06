@@ -21,5 +21,7 @@ public class NoteConfiguration : IEntityTypeConfiguration<Note>
         builder.Property(x => x.NoteType).IsRequired();
         
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Note_Id");
+        
+        builder.ToTable("Notes", "ClientMeetingHandler");
     }
 }

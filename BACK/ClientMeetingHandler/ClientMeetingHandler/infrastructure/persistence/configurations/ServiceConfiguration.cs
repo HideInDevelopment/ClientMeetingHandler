@@ -24,7 +24,10 @@ public class ServiceConfiguration : IEntityTypeConfiguration<Service>
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Service_Id");
         builder.HasIndex(x => new { x.Id, x.ServiceTypeId }).HasDatabaseName("IX_ServiceType_Service_Id");
         
-        builder.HasOne<ServiceType>().WithOne().HasForeignKey<Service>(x => x.ServiceTypeId);
-        builder.HasMany<Note>().WithOne().HasForeignKey(x => x.Id);
+        builder.HasMany(s => s.Notes)
+            .WithOne(n => n.Service)
+            .HasForeignKey(n => n.ServiceId);
+        
+        builder.ToTable("Services", "ClientMeetingHandler");
     }
 }

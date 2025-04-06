@@ -23,5 +23,7 @@ public class ContactConfiguration : IEntityTypeConfiguration<Contact>
         
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Contact_Id");
         builder.HasIndex(x => x.Email).HasDatabaseName("IX_Contact_Email");
+        
+        builder.ToTable("Contacts", "ClientMeetingHandler");
     }
 }

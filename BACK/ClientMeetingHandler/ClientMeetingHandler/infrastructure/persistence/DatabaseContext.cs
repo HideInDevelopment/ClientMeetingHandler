@@ -30,12 +30,12 @@ public class OrderingContextDesignFactory : IDesignTimeDbContextFactory<Database
     {
         IConfigurationRoot configurationRoot = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json")
+            .AddJsonFile("appsettings.json", optional: true)
             .Build();
         
         var builder = new DbContextOptionsBuilder<DatabaseContext>();
         
-        var connectionString = configurationRoot.GetConnectionString("Database");
+        var connectionString = configurationRoot.GetConnectionString("ClientMeetingHandler");
         
         builder.UseSqlServer(
             connectionString,
