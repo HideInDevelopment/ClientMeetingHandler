@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using ClientMeetingHandler.presentation.dto;
 using ClientMeetingHandler.presentation.dto.client;
 using ClientMeetingHandler.presentation.dto.contact;
 using ClientMeetingHandler.presentation.dto.location;

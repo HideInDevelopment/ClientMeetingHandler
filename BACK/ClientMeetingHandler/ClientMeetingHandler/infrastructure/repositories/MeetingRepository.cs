@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.repositories;
 
@@ -21,4 +22,8 @@ public class MeetingRepository: IMeetingRepository
     public Task UpdateAsync(Meeting entity) => _repository.UpdateAsync(entity);
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
+    
+    public Task<IQueryable<Meeting>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
+
+    public Task<Meeting?> GetSingleWithIncludesAsync(Expression<Func<Meeting, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
 }

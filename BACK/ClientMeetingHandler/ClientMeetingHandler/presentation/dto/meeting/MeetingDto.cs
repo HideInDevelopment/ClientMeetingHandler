@@ -8,7 +8,7 @@ public class MeetingDto : IDto, IMapToEntity<Meeting>
     public Guid Id { get; set; }
     public DateTime Date { get; set; }
     public int Duration { get; set; }
-    public Guid LocalizationId { get; set; }
+    public Guid LocationId { get; set; }
     public Guid ClientId { get; set; }
     
     public Meeting ToEntity()
@@ -18,7 +18,7 @@ public class MeetingDto : IDto, IMapToEntity<Meeting>
             Id = Id,
             Date = Date,
             Duration = Duration,
-            LocalizationId = LocalizationId,
+            LocationId = LocationId,
             ClientId = ClientId,
         };
     }

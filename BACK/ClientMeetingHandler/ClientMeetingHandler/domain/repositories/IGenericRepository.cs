@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace ClientMeetingHandler.domain.repositories;
 
 public interface IGenericRepository<TKey, TEntity> where TEntity : class
@@ -8,4 +10,8 @@ public interface IGenericRepository<TKey, TEntity> where TEntity : class
     Task AddAsync(TEntity entity);
     Task UpdateAsync(TEntity entity);
     Task DeleteAsync(TKey key);
+    
+    // Functions for dynamic includes
+    Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(params string[] includes);
+    Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, params string[] includes);
 }

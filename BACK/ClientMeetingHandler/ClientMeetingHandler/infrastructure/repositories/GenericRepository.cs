@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.exceptions;
 using ClientMeetingHandler.domain.repositories;
@@ -66,5 +67,20 @@ public class GenericRepository<TKey, TEntity> : IGenericRepository<TKey, TEntity
         {
             throw new FailOnPersistEntityException<TEntity>(entity);
         }
+    }
+
+    public Task<IQueryable<TEntity>> GetQueryWithIncludesAsync(params string[] includes)
+    {
+        var query = _entity.AsSplitQuery();
+
+        query = includes.Aggregate(query, (current, include) => current.Include(include));
+
+        return Task.FromResult(query);
+    }
+
+    public async Task<TEntity?> GetSingleWithIncludesAsync(Expression<Func<TEntity, bool>> predicate, params string[] includes)
+    {
+        var query = await GetQueryWithIncludesAsync(includes);
+        return await query.FirstOrDefaultAsync(predicate);
     }
 }

@@ -7,7 +7,7 @@ public class Meeting : Entity<Guid>, IMapToDto<MeetingDto>
 {
     public DateTime Date { get; set; }
     public int Duration { get; set; }
-    public Guid LocalizationId { get; set; }
+    public Guid LocationId { get; set; }
     public Guid ClientId { get; set; }
     
     public virtual Location Location { get; set; }
@@ -20,7 +20,7 @@ public class Meeting : Entity<Guid>, IMapToDto<MeetingDto>
             Id = Id,
             Date = Date,
             Duration = Duration,
-            LocalizationId = LocalizationId,
+            LocationId = LocationId,
             ClientId = ClientId,
         };
     }

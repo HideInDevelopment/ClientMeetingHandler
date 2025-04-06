@@ -1,27 +1,33 @@
+using System.Linq.Expressions;
+using ClientMeetingHandler.domain.entities;
 using ClientMeetingHandler.domain.repositories;
 
 namespace ClientMeetingHandler.infrastructure.repositories;
 
 public class ContactRepository : IContactRepository
 {
-    private readonly IGenericRepository<Guid, domain.entities.Contact> _repository;
+    private readonly IGenericRepository<Guid, Contact> _repository;
 
-    public ContactRepository(IGenericRepository<Guid, domain.entities.Contact> repository)
+    public ContactRepository(IGenericRepository<Guid, Contact> repository)
     {
         _repository = repository;
     }
     
-    public Task<IQueryable<domain.entities.Contact>> GetAllAsync() => _repository.GetAllAsync();
+    public Task<IQueryable<Contact>> GetAllAsync() => _repository.GetAllAsync();
 
-    public Task<domain.entities.Contact?> GetByIdAsync(Guid id) => _repository.GetByIdAsync(id);
+    public Task<Contact?> GetByIdAsync(Guid id) => _repository.GetByIdAsync(id);
 
-    public Task AddAsync(domain.entities.Contact entity) => _repository.AddAsync(entity);
+    public Task AddAsync(Contact entity) => _repository.AddAsync(entity);
 
-    public Task UpdateAsync(domain.entities.Contact entity) => _repository.UpdateAsync(entity);
+    public Task UpdateAsync(Contact entity) => _repository.UpdateAsync(entity);
 
     public Task DeleteAsync(Guid key) => _repository.DeleteAsync(key);
+    
+    public Task<IQueryable<Contact>> GetQueryWithIncludesAsync(params string[] includes) => _repository.GetQueryWithIncludesAsync(includes);
 
-    public async Task<domain.entities.Contact?> GetByEmail(string email)
+    public Task<Contact?> GetSingleWithIncludesAsync(Expression<Func<Contact, bool>> predicate, params string[] includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
+
+    public async Task<Contact?> GetByEmail(string email)
     {
         var allContacts = await _repository.GetAllAsync();
         return allContacts.FirstOrDefault(x => x.Email == email);
