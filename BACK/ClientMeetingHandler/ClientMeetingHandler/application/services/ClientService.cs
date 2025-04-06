@@ -13,7 +13,7 @@ public class ClientService : IClientService
 {
     private readonly IClientRepository _clientRepository;
     private readonly ClientMapper _clientMapper;
-    private readonly List<string> _clientIncludes = ["Contact", "Meetings", "Services"];
+    private readonly IReadOnlyList<string> _clientIncludes = ["Contact", "Meetings", "Services"];
 
     public ClientService(IClientRepository clientRepository, ClientMapper clientMapper)
     {
@@ -37,7 +37,7 @@ public class ClientService : IClientService
     {
         var clientToPersist = _clientMapper.MapDtoToEntity((ClientDto)dto);
         var existingClient = await _clientRepository.GetByIdAsync(clientToPersist.Id);
-        if (existingClient != null)
+        if (existingClient == null)
         {
             throw new EntityAlreadyExistException<Client>(clientToPersist);
         }

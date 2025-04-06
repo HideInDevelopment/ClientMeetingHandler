@@ -40,6 +40,7 @@ public static class DependencyInjection
         
         // Services
         services.AddScoped<IClientService, ClientService>();
+        services.AddScoped<IContactService, ContactService>();
         
         // Fluent API
         services.AddScoped<IEntityTypeConfiguration<Client>, ClientConfiguration>();

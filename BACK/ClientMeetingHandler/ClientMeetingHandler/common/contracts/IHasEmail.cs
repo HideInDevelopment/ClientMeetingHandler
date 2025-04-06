@@ -1,6 +1,9 @@
-namespace ClientMeetingHandler.domain.repositories.contracts;
+namespace ClientMeetingHandler.common.contracts;
 
-public interface IHasEmail<TEntity> where TEntity : class
+public interface IHasEmail<TDto, TDetailDto> 
+    where TDto : class, IDto
+    where TDetailDto : class, IDto
 {
-    Task<TEntity?> GetByEmail(string email);
+    Task<TDto?> GetByEmail(string email);
+    Task<TDetailDto?> GetDetailByEmail(string email);
 }

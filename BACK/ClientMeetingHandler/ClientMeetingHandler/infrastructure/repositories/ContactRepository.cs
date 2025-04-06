@@ -26,10 +26,4 @@ public class ContactRepository : IContactRepository
     public Task<IQueryable<Contact>> GetQueryWithIncludesAsync(IEnumerable<string> includes) => _repository.GetQueryWithIncludesAsync(includes);
 
     public Task<Contact?> GetSingleWithIncludesAsync(Expression<Func<Contact, bool>> predicate, IEnumerable<string> includes) => _repository.GetSingleWithIncludesAsync(predicate, includes);
-
-    public async Task<Contact?> GetByEmail(string email)
-    {
-        var allContacts = await _repository.GetAllAsync();
-        return allContacts.FirstOrDefault(x => x.Email == email);
-    }
 }
