@@ -9,7 +9,7 @@ import {Client} from '../../../core/models/client.model';
   selector: 'app-client-form',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
-  template:'./client-form.component.html'
+  templateUrl: 'client-form.component.html'
 })
 export class ClientFormComponent implements OnInit {
   clientForm: FormGroup;

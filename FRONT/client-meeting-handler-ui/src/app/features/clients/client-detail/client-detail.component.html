@@ -9,9 +9,9 @@
 
   <div *ngIf="client" class="bg-white shadow-md rounded-lg p-6">
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">{{ client.name }}</h1>
+      <h1 class="text-3xl font-bold">{{ client.Name }}</h1>
       <div>
-        <button [routerLink]="['/clients', client.id, 'edit']" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mr-2">
+        <button [routerLink]="['/clients', client.Id, 'edit']" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mr-2">
           Edit
         </button>
         <button [routerLink]="['/clients']" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
@@ -24,28 +24,28 @@
       <div class="bg-gray-50 p-4 rounded-lg">
         <h2 class="text-xl font-semibold mb-3">Client Information</h2>
         <div class="mb-2">
-          <span class="font-medium">ID:</span> {{ client.id }}
+          <span class="font-medium">ID:</span> {{ client.Id }}
         </div>
         <div class="mb-2">
-          <span class="font-medium">Name:</span> {{ client.name }}
+          <span class="font-medium">Name:</span> {{ client.Name }}
         </div>
       </div>
 
-      <div *ngIf="client.contact" class="bg-gray-50 p-4 rounded-lg">
+      <div *ngIf="client.Contact" class="bg-gray-50 p-4 rounded-lg">
         <h2 class="text-xl font-semibold mb-3">Contact Information</h2>
         <div class="mb-2">
-          <span class="font-medium">Email:</span> {{ client.contact.email }}
+          <span class="font-medium">Email:</span> {{ client.Contact.Email }}
         </div>
         <div class="mb-2">
-          <span class="font-medium">Phone:</span> {{ client.contact.phoneNumber }}
+          <span class="font-medium">Phone:</span> {{ client.Contact.PhoneNumber }}
         </div>
         <div class="mb-2">
-          <span class="font-medium">Country:</span> {{ client.contact.country }}
+          <span class="font-medium">Country:</span> {{ client.Contact.Country }}
         </div>
       </div>
     </div>
 
-    <div *ngIf="client.meetings && client.meetings.length > 0" class="mt-6">
+    <div *ngIf="client.Meetings && client.Meetings.length > 0" class="mt-6">
       <h2 class="text-xl font-semibold mb-3">Meetings</h2>
       <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200">
@@ -57,11 +57,11 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let meeting of client.meetings" class="hover:bg-gray-50">
-            <td class="py-2 px-4 border-b">{{ meeting.date | date:'medium' }}</td>
-            <td class="py-2 px-4 border-b">{{ meeting.duration }} minutes</td>
+          <tr *ngFor="let meeting of client.Meetings" class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">{{ meeting.Date | date:'medium' }}</td>
+            <td class="py-2 px-4 border-b">{{ meeting.Duration }} minutes</td>
             <td class="py-2 px-4 border-b text-right">
-              <button [routerLink]="['/meetings', meeting.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
+              <button [routerLink]="['/meetings', meeting.Id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
                 View
               </button>
             </td>
@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div *ngIf="client.services && client.services.length > 0" class="mt-6">
+    <div *ngIf="client.Services && client.Services.length > 0" class="mt-6">
       <h2 class="text-xl font-semibold mb-3">Services</h2>
       <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200">
@@ -84,12 +84,12 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let service of client.services" class="hover:bg-gray-50">
-            <td class="py-2 px-4 border-b">{{ service.name }}</td>
-            <td class="py-2 px-4 border-b">{{ service.date | date:'medium' }}</td>
-            <td class="py-2 px-4 border-b">{{ service.expiration | date:'medium' }}</td>
+          <tr *ngFor="let service of client.Services" class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">{{ service.Name }}</td>
+            <td class="py-2 px-4 border-b">{{ service.Date | date:'medium' }}</td>
+            <td class="py-2 px-4 border-b">{{ service.Expiration | date:'medium' }}</td>
             <td class="py-2 px-4 border-b text-right">
-              <button [routerLink]="['/services', service.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
+              <button [routerLink]="['/services', service.Id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
                 View
               </button>
             </td>

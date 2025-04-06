@@ -2,14 +2,14 @@ import {Note} from './note.model';
 import {ServiceType} from './service-type.model';
 
 export interface Service {
-  id: string;
-  name: string;
-  date: Date;
-  expiration: Date;
-  serviceTypeId: string;
+  Id: string;
+  Name: string;
+  Date: Date;
+  Expiration: Date;
+  ServiceTypeId: string;
 }
 
 export interface ServiceDetail extends Service {
-  serviceType: ServiceType;
-  notes: Note[];
+  ServiceType: ServiceType;
+  Notes: Note[];
 }

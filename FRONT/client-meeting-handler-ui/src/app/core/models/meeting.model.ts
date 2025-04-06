@@ -2,14 +2,14 @@ import {Client} from './client.model';
 import {Location} from './location.model';
 
 export interface Meeting {
-  id: string;
-  date: Date;
-  duration: number;
-  locationId: string;
-  clientId: string;
+  Id: string;
+  Date: Date;
+  Duration: number;
+  LocationId: string;
+  ClientId: string;
 }
 
 export interface MeetingDetail extends Meeting {
-  location: Location;
-  client: Client;
+  Location: Location;
+  Client: Client;
 }

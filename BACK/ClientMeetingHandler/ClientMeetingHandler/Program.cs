@@ -35,10 +35,10 @@ builder.Services.AddMvc();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(
-        name: "AllowAnyOrigin",
+        name: "AllowSpecificOrigins",
         bdr =>
             bdr
-                .WithOrigins("http://localhost","http://localhost:4200/")
+                .WithOrigins("http://localhost:4200")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()
@@ -51,7 +51,7 @@ webApp.UseHttpsRedirection();
 
 webApp.UseRouting();
 
-webApp.UseCors("AllowAnyOrigin");
+webApp.UseCors("AllowSpecificOrigins");
 
 webApp.Use(async (context, next) =>
 {

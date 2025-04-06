@@ -1,12 +1,12 @@
 import {Client} from './client.model';
 
 export interface Contact {
-  country: string;
-  phoneNumber: number;
-  email: string;
-  clientId: string;
+  Country: string;
+  PhoneNumber: number;
+  Email: string;
+  ClientId: string;
 }
 
 export interface ContactDetail extends Contact {
-  client: Client
+  Client: Client
 }

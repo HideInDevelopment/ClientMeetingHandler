@@ -8,7 +8,7 @@ import {RouterModule} from '@angular/router';
   selector: 'app-client-list',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: './client-list.component.html'
+  templateUrl: 'client-list.component.html'
 })
 export class ClientListComponent implements OnInit {
 
@@ -27,6 +27,7 @@ export class ClientListComponent implements OnInit {
 
     this.clientService.getAllClients().subscribe({
       next: (data) => {
+        console.log(data);
         this.clients = data;
         this.loading = false;
       },
@@ -42,7 +43,7 @@ export class ClientListComponent implements OnInit {
     if (confirm('Are you sure you want to delete this client?')) {
       this.clientService.deleteClient(id).subscribe({
         next: () => {
-          this.clients = this.clients.filter(client => client.id !== id);
+          this.clients = this.clients.filter(client => client.Id !== id);
         },
         error: (err) => {
           console.error('Error deleting client:', err);

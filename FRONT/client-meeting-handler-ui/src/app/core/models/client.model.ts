@@ -3,13 +3,13 @@ import {Meeting} from "./meeting.model";
 import {Service} from "./service.model";
 
 export interface Client {
-    id: string;
-    name: string;
-    contactId: string;
+    Id: string;
+    Name: string;
+    ContactId: string;
 }
 
 export interface ClientDetail extends Client {
-    contact: Contact;
-    meetings: Meeting[];
-    services: Service[];
+    Contact: Contact;
+    Meetings: Meeting[];
+    Services: Service[];
 }

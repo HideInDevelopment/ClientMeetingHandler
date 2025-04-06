@@ -1,9 +1,9 @@
 export interface ServiceType {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  sessions: number;
+  Id: string;
+  Name: string;
+  Description: string;
+  Price: number;
+  Sessions: number;
 }
 
 export interface ServiceTypeDetail extends ServiceType {}

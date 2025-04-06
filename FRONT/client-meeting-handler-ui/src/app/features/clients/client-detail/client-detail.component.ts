@@ -8,7 +8,7 @@ import {ClientService} from '../../../core/services/client.service';
   selector: 'app-client-detail',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: './client-detail.component.html'
+  templateUrl: 'client-detail.component.html'
 })
 
 export class ClientDetailComponent implements OnInit {

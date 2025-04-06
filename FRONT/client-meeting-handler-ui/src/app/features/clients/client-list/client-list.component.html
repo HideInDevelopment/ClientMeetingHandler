@@ -28,15 +28,15 @@
       </thead>
       <tbody>
       <tr *ngFor="let client of clients" class="hover:bg-gray-50">
-        <td class="py-2 px-4 border-b">{{ client.name }}</td>
+        <td class="py-2 px-4 border-b">{{ client.Name }}</td>
         <td class="py-2 px-4 border-b text-right">
-          <button [routerLink]="['/clients', client.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm mr-2">
+          <button [routerLink]="['/clients', client.Id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm mr-2">
             View
           </button>
-          <button [routerLink]="['/clients', client.id, 'edit']" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-3 rounded text-sm mr-2">
+          <button [routerLink]="['/clients', client.Id, 'edit']" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-3 rounded text-sm mr-2">
             Edit
           </button>
-          <button (click)="deleteClient(client.id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-sm">
+          <button (click)="deleteClient(client.Id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-sm">
             Delete
           </button>
         </td>
