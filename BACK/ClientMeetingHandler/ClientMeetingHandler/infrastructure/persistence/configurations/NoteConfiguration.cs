@@ -6,11 +6,6 @@ namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
 public class NoteConfiguration : IEntityTypeConfiguration<Note>
 {
-    public void Configure(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfiguration(this);
-    }
-    
     public void Configure(EntityTypeBuilder<Note> builder)
     {
         builder.HasKey(x => x.Id);

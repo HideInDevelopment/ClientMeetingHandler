@@ -6,11 +6,6 @@ namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
 public class ServiceTypeConfiguration : IEntityTypeConfiguration<ServiceType>
 {
-    public void Configure(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfiguration(this);
-    }
-    
     public void Configure(EntityTypeBuilder<ServiceType> builder)
     {
         builder.HasKey(x => x.Id);

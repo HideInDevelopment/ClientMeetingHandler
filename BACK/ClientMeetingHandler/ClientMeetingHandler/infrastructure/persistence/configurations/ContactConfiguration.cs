@@ -7,11 +7,6 @@ namespace ClientMeetingHandler.infrastructure.persistence.configurations;
 
 public class ContactConfiguration : IEntityTypeConfiguration<Contact>
 {
-    public void Configure(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfiguration(this);
-    }
-    
     public void Configure(EntityTypeBuilder<Contact> builder)
     {
         builder.HasKey(x => x.Id);
