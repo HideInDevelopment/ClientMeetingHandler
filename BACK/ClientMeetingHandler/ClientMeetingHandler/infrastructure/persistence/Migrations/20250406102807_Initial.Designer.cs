@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250406085921_Initial")]
+    [Migration("20250406102807_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -74,6 +74,9 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClientId")
+                        .IsUnique();
 
                     b.HasIndex("Email")
                         .HasDatabaseName("IX_Contact_Email");
@@ -259,7 +262,7 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                 {
                     b.HasOne("ClientMeetingHandler.domain.entities.Client", "Client")
                         .WithOne("Contact")
-                        .HasForeignKey("ClientMeetingHandler.domain.entities.Contact", "Id")
+                        .HasForeignKey("ClientMeetingHandler.domain.entities.Contact", "ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

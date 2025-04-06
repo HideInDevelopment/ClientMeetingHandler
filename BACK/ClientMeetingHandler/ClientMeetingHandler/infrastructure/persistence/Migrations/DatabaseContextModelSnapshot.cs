@@ -72,6 +72,9 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClientId")
+                        .IsUnique();
+
                     b.HasIndex("Email")
                         .HasDatabaseName("IX_Contact_Email");
 
@@ -256,7 +259,7 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                 {
                     b.HasOne("ClientMeetingHandler.domain.entities.Client", "Client")
                         .WithOne("Contact")
-                        .HasForeignKey("ClientMeetingHandler.domain.entities.Contact", "Id")
+                        .HasForeignKey("ClientMeetingHandler.domain.entities.Contact", "ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

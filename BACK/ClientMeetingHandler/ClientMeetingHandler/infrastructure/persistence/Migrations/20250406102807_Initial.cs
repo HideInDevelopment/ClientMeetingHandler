@@ -74,8 +74,8 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_Contacts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Contacts_Clients_Id",
-                        column: x => x.Id,
+                        name: "FK_Contacts_Clients_ClientId",
+                        column: x => x.ClientId,
                         principalSchema: "ClientMeetingHandler",
                         principalTable: "Clients",
                         principalColumn: "Id",
@@ -186,6 +186,13 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                 schema: "ClientMeetingHandler",
                 table: "Contacts",
                 column: "Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Contacts_ClientId",
+                schema: "ClientMeetingHandler",
+                table: "Contacts",
+                column: "ClientId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Location_Id",

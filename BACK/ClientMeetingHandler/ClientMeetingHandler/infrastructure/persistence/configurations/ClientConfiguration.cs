@@ -19,7 +19,7 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         
         builder.HasOne(c => c.Contact)
             .WithOne(c => c.Client)
-            .HasForeignKey<Contact>(c => c.Id)
+            .HasForeignKey<Contact>(c => c.ClientId)
             .OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(c => c.Meetings)
             .WithOne(m => m.Client)
