@@ -5,3 +5,5 @@ export interface ServiceType {
   price: number;
   sessions: number;
 }
+
+export interface ServiceTypeDetail extends ServiceType {}

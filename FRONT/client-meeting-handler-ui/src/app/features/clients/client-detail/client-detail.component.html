@@ -1,0 +1,102 @@
+<div class="container mx-auto p-4">
+  <div *ngIf="loading" class="text-center py-4">
+    <span class="text-gray-600">Loading client details...</span>
+  </div>
+
+  <div *ngIf="error" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+    {{ error }}
+  </div>
+
+  <div *ngIf="client" class="bg-white shadow-md rounded-lg p-6">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">{{ client.name }}</h1>
+      <div>
+        <button [routerLink]="['/clients', client.id, 'edit']" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mr-2">
+          Edit
+        </button>
+        <button [routerLink]="['/clients']" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+          Back to List
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <h2 class="text-xl font-semibold mb-3">Client Information</h2>
+        <div class="mb-2">
+          <span class="font-medium">ID:</span> {{ client.id }}
+        </div>
+        <div class="mb-2">
+          <span class="font-medium">Name:</span> {{ client.name }}
+        </div>
+      </div>
+
+      <div *ngIf="client.contact" class="bg-gray-50 p-4 rounded-lg">
+        <h2 class="text-xl font-semibold mb-3">Contact Information</h2>
+        <div class="mb-2">
+          <span class="font-medium">Email:</span> {{ client.contact.email }}
+        </div>
+        <div class="mb-2">
+          <span class="font-medium">Phone:</span> {{ client.contact.phoneNumber }}
+        </div>
+        <div class="mb-2">
+          <span class="font-medium">Country:</span> {{ client.contact.country }}
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="client.meetings && client.meetings.length > 0" class="mt-6">
+      <h2 class="text-xl font-semibold mb-3">Meetings</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200">
+          <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-left">Date</th>
+            <th class="py-2 px-4 border-b text-left">Duration</th>
+            <th class="py-2 px-4 border-b text-right">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let meeting of client.meetings" class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">{{ meeting.date | date:'medium' }}</td>
+            <td class="py-2 px-4 border-b">{{ meeting.duration }} minutes</td>
+            <td class="py-2 px-4 border-b text-right">
+              <button [routerLink]="['/meetings', meeting.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
+                View
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div *ngIf="client.services && client.services.length > 0" class="mt-6">
+      <h2 class="text-xl font-semibold mb-3">Services</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200">
+          <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-left">Name</th>
+            <th class="py-2 px-4 border-b text-left">Date</th>
+            <th class="py-2 px-4 border-b text-left">Expiration</th>
+            <th class="py-2 px-4 border-b text-right">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let service of client.services" class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">{{ service.name }}</td>
+            <td class="py-2 px-4 border-b">{{ service.date | date:'medium' }}</td>
+            <td class="py-2 px-4 border-b">{{ service.expiration | date:'medium' }}</td>
+            <td class="py-2 px-4 border-b text-right">
+              <button [routerLink]="['/services', service.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
+                View
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

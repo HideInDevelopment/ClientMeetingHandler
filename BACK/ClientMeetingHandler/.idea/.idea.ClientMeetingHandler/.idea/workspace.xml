@@ -8,11 +8,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="" />
+    <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service-type.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service-type.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/styles.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -30,10 +45,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/domain/entities/Client.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/domain/entities/Client.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/application/services/ClientService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/domain/enums/NoteType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/infrastructure/repositories/ClientRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientMeetingHandler/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/manue/Repositories/ClientMeetingHandler/BACK/ClientMeetingHandler/ClientMeetingHandler/presentation/dto/serviceType/ServiceTypeDetailDto.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -49,6 +66,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ClientMeetingHandler: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.ClientMeetingHandler: https.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -57,7 +76,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -113,6 +132,8 @@
       <workItem from="1743494282445" duration="702000" />
       <workItem from="1743498160493" duration="4614000" />
       <workItem from="1743869163081" duration="8135000" />
+      <workItem from="1743916315295" duration="19218000" />
+      <workItem from="1743947147445" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
@@ -234,7 +255,87 @@
       <option name="project" value="LOCAL" />
       <updated>1743877396885</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Small clean-up and minor refactor changing `Localization` into `Location`.">
+      <option name="closed" value="true" />
+      <created>1743916877359</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743916877359</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implementation of detailed dto's to handle relation between entities. Implementation of extra functions in repositories.">
+      <option name="closed" value="true" />
+      <created>1743922018021</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743922018021</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Implementation of detail mappings.">
+      <option name="closed" value="true" />
+      <created>1743925459990</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743925459990</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Change in service name.">
+      <option name="closed" value="true" />
+      <created>1743925656154</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743925656154</updated>
+    </task>
+    <task id="LOCAL-00020" summary="small changes in domain layer to fix one to one relation between client and contact.">
+      <option name="closed" value="true" />
+      <created>1743927939762</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1743927939762</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Changes in database structure and relationship mappings.">
+      <option name="closed" value="true" />
+      <created>1743929948184</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743929948184</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Clean up entity configurations.">
+      <option name="closed" value="true" />
+      <created>1743930147625</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743930147625</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Implement service layer.">
+      <option name="closed" value="true" />
+      <created>1743934313063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1743934313063</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Implementation of controller layer.">
+      <option name="closed" value="true" />
+      <created>1743934886785</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1743934886785</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Migration modification. Fix client-contract FK relation">
+      <option name="closed" value="true" />
+      <created>1743935878829</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1743935878829</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +343,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Main - Initial setup" />
@@ -259,6 +371,20 @@
     <MESSAGE value="Implementation of entity and dto inside mappers." />
     <MESSAGE value="Code improvements and modifications." />
     <MESSAGE value="Modifications in ClientService.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifications in ClientService.cs" />
+    <MESSAGE value="Small clean-up and minor refactor changing `Localization` into `Location`." />
+    <MESSAGE value="Implementation of detailed dto's to handle relation between entities. Implementation of extra functions in repositories." />
+    <MESSAGE value="Implementation of detail mappings." />
+    <MESSAGE value="Change in service name." />
+    <MESSAGE value="small changes in domain layer to fix one to one relation between client and contact." />
+    <MESSAGE value="Changes in database structure and relationship mappings." />
+    <MESSAGE value="Clean up entity configurations." />
+    <MESSAGE value="Implement service layer." />
+    <MESSAGE value="Implementation of controller layer." />
+    <MESSAGE value="Migration modification. Fix client-contract FK relation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migration modification. Fix client-contract FK relation" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
