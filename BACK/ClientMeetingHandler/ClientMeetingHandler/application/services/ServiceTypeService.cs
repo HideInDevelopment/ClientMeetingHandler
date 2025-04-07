@@ -35,7 +35,7 @@ public class ServiceTypeService : IServiceTypeService
     {
         var serviceTypeToPersist = _serviceTypeMapper.MapDtoToEntity((ServiceTypeDto)dto);
         var existingServiceType = await _serviceTypeRepository.GetByIdAsync(serviceTypeToPersist.Id);
-        if (existingServiceType == null)
+        if (existingServiceType != null)
         {
             throw new EntityAlreadyExistException<ServiceType>(serviceTypeToPersist);
         }

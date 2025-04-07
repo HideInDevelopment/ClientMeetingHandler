@@ -36,7 +36,7 @@ public class MeetingService : IMeetingService
     {
         var meetingToPersist = _meetingMapper.MapDtoToEntity((MeetingDto)dto);
         var existingMeeting = await _meetingRepository.GetByIdAsync(meetingToPersist.Id);
-        if (existingMeeting == null)
+        if (existingMeeting != null)
         {
             throw new EntityAlreadyExistException<Meeting>(meetingToPersist);
         }

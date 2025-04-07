@@ -7,16 +7,15 @@ import {Client} from '../../../core/models/client.model';
 import {Contact} from '../../../core/models/contact.model';
 import {ContactService} from '../../../core/services/contact.service';
 import {debounceTime, distinctUntilChanged} from 'rxjs';
+import {ContactModalComponent} from '../../contacts/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-client-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, ContactModalComponent],
   templateUrl: './client-form.component.html'
 })
 export class ClientFormComponent implements OnInit {
-  @ViewChild('contactEmailInput') contactEmailInput!: ElementRef;
-
   clientForm: FormGroup;
   isEditMode = false;
   clientId: string | null = null;
@@ -27,7 +26,9 @@ export class ClientFormComponent implements OnInit {
   filteredContacts: Contact[] = [];
   showContactDropdown = false;
   searchTerm = '';
-  createNewContactMode = false;
+
+  // Modal properties
+  showContactModal = false;
 
   constructor(
     private fb: FormBuilder,
@@ -70,11 +71,6 @@ export class ClientFormComponent implements OnInit {
       .subscribe(value => {
         this.searchTerm = value;
         this.filterContacts();
-        // Solo mostrar el dropdown si el usuario está interactuando activamente
-        // y no es el llenado inicial de datos
-        if (document.activeElement === this.contactEmailInput?.nativeElement) {
-          this.showContactDropdown = true;
-        }
       });
   }
 
@@ -105,19 +101,12 @@ export class ClientFormComponent implements OnInit {
     this.loading = true;
     this.clientService.getClientById(id).subscribe({
       next: (client) => {
-        // Guardar estado actual del dropdown
-        const currentDropdownState = this.showContactDropdown;
-
         this.clientForm.patchValue(client);
 
         // Si el cliente tiene un contacto, cargar su email
         if (client.ContactId) {
           this.contactService.getContactById(client.ContactId).subscribe(contact => {
-            // Durante esta asignación, no queremos que se muestre el dropdown
-            this.showContactDropdown = false;
             this.clientForm.patchValue({ contactEmail: contact.Email });
-            // Reestablecer el estado anterior (aunque probablemente siga siendo falso)
-            setTimeout(() => this.showContactDropdown = currentDropdownState, 0);
           });
         }
 
@@ -149,43 +138,42 @@ export class ClientFormComponent implements OnInit {
     this.showContactDropdown = false;
   }
 
-  toggleCreateNewContact(): void {
-    this.createNewContactMode = !this.createNewContactMode;
+  openContactModal(): void {
+    this.showContactModal = true;
     this.showContactDropdown = false;
-
-    if (!this.createNewContactMode) {
-      // Reiniciar la búsqueda cuando cancelamos creación
-      this.filterContacts();
-    }
   }
 
-  createNewContact(): void {
-    // Simple ejemplo - en una app real, usarías un modal o formulario dedicado
-    const email = this.clientForm.get('contactEmail')?.value;
-    if (!email) {
-      this.error = 'Email is required for new contact';
-      return;
-    }
+  closeContactModal(): void {
+    this.showContactModal = false;
+  }
 
-    const newContact: Contact = {
-      Id: this.generateGuid(),
-      Email: email,
-      Country: '',
-      PhoneNumber: 0,
-      ClientId: this.clientForm.get('Id')?.value
-    };
+  saveNewContact(contact: Contact): void {
+    // Asignar el ID del cliente actual si es un nuevo cliente
+    contact.ClientId = this.clientForm.get('Id')?.value;
 
-    this.contactService.createContact(newContact).subscribe({
-      next: (contact) => {
-        this.clientForm.patchValue({ ContactId: contact.Id });
-        this.createNewContactMode = false;
-        this.loadAvailableContacts(); // Recargar la lista (aunque este contacto ya estará asociado)
+    this.contactService.createContact(contact).subscribe({
+      next: (createdContact) => {
+        // Actualizar el formulario con el nuevo contacto
+        this.clientForm.patchValue({
+          ContactId: createdContact.Id,
+          contactEmail: createdContact.Email
+        });
+
+        // Cerrar el modal y actualizar la lista de contactos
+        this.showContactModal = false;
+        this.loadAvailableContacts();
       },
       error: (err) => {
         console.error('Error creating contact:', err);
-        this.error = 'Failed to create new contact';
+        this.error = 'Failed to create new contact. Please try again later.';
       }
     });
+  }
+
+  hideDropdown(): void {
+    setTimeout(() => {
+      this.showContactDropdown = false;
+    }, 200);
   }
 
   onSubmit(): void {
@@ -235,12 +223,4 @@ export class ClientFormComponent implements OnInit {
       return v.toString(16);
     });
   }
-
-  hideDropdown(): void {
-    setTimeout(() => {
-      this.showContactDropdown = false;
-    }, 200);
-  }
-
-  protected readonly setTimeout = setTimeout;
 }

@@ -36,7 +36,7 @@ public class LocationService : ILocationService
     {
         var locationToPersist = _locationMapper.MapDtoToEntity((LocationDto)dto);
         var existingLocation = await _locationRepository.GetByIdAsync(locationToPersist.Id);
-        if (existingLocation == null)
+        if (existingLocation != null)
         {
             throw new EntityAlreadyExistException<Location>(locationToPersist);
         }

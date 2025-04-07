@@ -12,7 +12,7 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         builder.Property(g => g.Id).ValueGeneratedOnAdd();
         
         builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
-        builder.Property(x => x.ContactId).IsRequired();
+        builder.Property(x => x.ContactId);
         
         builder.HasIndex(x => x.Id).HasDatabaseName("IX_Client_Id");
         builder.HasIndex(x => new { x.Id, x.ContactId }).HasDatabaseName("IX_Contact_Client_Id");
@@ -25,7 +25,10 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
             .WithOne(m => m.Client)
             .HasForeignKey(m => m.ClientId)
             .OnDelete(DeleteBehavior.Cascade);
-        builder.HasMany(c => c.Services);
+        builder.HasMany(c => c.Services)
+            .WithOne(s => s.Client)
+            .HasForeignKey(s => s.ClientId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.ToTable("Clients", "ClientMeetingHandler");
     }

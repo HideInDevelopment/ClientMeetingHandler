@@ -37,7 +37,7 @@ public class ClientService : IClientService
     {
         var clientToPersist = _clientMapper.MapDtoToEntity((ClientDto)dto);
         var existingClient = await _clientRepository.GetByIdAsync(clientToPersist.Id);
-        if (existingClient == null)
+        if (existingClient != null)
         {
             throw new EntityAlreadyExistException<Client>(clientToPersist);
         }

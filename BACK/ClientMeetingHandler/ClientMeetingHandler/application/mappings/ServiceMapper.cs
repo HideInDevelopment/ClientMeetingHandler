@@ -15,7 +15,9 @@ public class ServiceMapper: GenericMapper<Service, ServiceDto, ServiceDetailDto>
             Name = entity.Name,
             Date = entity.Date,
             Expiration = entity.Expiration,
+            ClientId = entity.ClientId,
             ServiceTypeId = entity.ServiceTypeId,
+            Client = entity.Client.ToDto(),
             ServiceType = entity.ServiceType.ToDto(),
             Notes = entity.Notes.Select(x => x.ToDto()).ToList(),
         };

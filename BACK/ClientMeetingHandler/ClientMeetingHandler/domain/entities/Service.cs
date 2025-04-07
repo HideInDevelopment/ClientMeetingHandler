@@ -8,8 +8,10 @@ public class Service : Entity<Guid>, IMapToDto<ServiceDto>
     public string Name { get; set; }
     public DateTime Date { get; set; }
     public DateTime Expiration { get; set; }
+    public Guid ClientId { get; set; }
     public Guid ServiceTypeId { get; set; }
     
+    public virtual Client Client { get; set; }
     public virtual ServiceType ServiceType { get; set; }
     public virtual List<Note> Notes { get; set; }
     
@@ -21,6 +23,7 @@ public class Service : Entity<Guid>, IMapToDto<ServiceDto>
             Name = Name,
             Date = Date,
             Expiration = Expiration,
+            ClientId = ClientId,
             ServiceTypeId = ServiceTypeId,
         };
     }

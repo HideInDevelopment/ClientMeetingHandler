@@ -36,7 +36,7 @@ public class NoteService : INoteService
     {
         var noteToPersist = _noteMapper.MapDtoToEntity((NoteDto)dto);
         var existingNote = await _noteRepository.GetByIdAsync(noteToPersist.Id);
-        if (existingNote == null)
+        if (existingNote != null)
         {
             throw new EntityAlreadyExistException<Note>(noteToPersist);
         }

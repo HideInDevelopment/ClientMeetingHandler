@@ -191,7 +191,7 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ClientId")
+                    b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Date")
@@ -298,15 +298,19 @@ namespace ClientMeetingHandler.Infrastructure.Persistence.Migrations
 
             modelBuilder.Entity("ClientMeetingHandler.domain.entities.Service", b =>
                 {
-                    b.HasOne("ClientMeetingHandler.domain.entities.Client", null)
+                    b.HasOne("ClientMeetingHandler.domain.entities.Client", "Client")
                         .WithMany("Services")
-                        .HasForeignKey("ClientId");
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ClientMeetingHandler.domain.entities.ServiceType", "ServiceType")
                         .WithMany()
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Client");
 
                     b.Navigation("ServiceType");
                 });

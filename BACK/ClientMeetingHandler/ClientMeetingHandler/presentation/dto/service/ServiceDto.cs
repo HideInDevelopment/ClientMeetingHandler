@@ -9,6 +9,7 @@ public class ServiceDto : IDto, IMapToEntity<Service>
     public string Name { get; set; }
     public DateTime Date { get; set; }
     public DateTime Expiration { get; set; }
+    public Guid ClientId { get; set; }
     public Guid ServiceTypeId { get; set; }
     
     public Service ToEntity()
@@ -19,6 +20,7 @@ public class ServiceDto : IDto, IMapToEntity<Service>
             Name = Name,
             Date = Date,
             Expiration = Expiration,
+            ClientId = ClientId,
             ServiceTypeId = ServiceTypeId,
         };
     }

@@ -36,7 +36,7 @@ public class ContactService : IContactService
     {
         var contactToPersist = _contactMapper.MapDtoToEntity((ContactDto)dto);
         var existingContact = await _contactRepository.GetByIdAsync(contactToPersist.Id);
-        if (existingContact == null)
+        if (existingContact != null)
         {
             throw new EntityAlreadyExistException<Contact>(contactToPersist);
         }
