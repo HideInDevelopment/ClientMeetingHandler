@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {map, Observable} from 'rxjs';
 import {Contact, ContactDetail} from '../models/contact.model';
 import {environment} from '../../../environments/environment';
 
@@ -14,6 +14,13 @@ export class ContactService {
 
   getAllContacts(): Observable<Contact[]> {
     return this.http.get<Contact[]>(`${this.apiUrl}/simple`);
+  }
+
+  getAvailableContacts(): Observable<Contact[]>{
+    return this.http.get<Contact[]>(`${this.apiUrl}/simple`)
+    .pipe(
+      map(contacts => contacts.filter(contact => !contact.ClientId))
+    )
   }
 
   getContactById(id: string): Observable<Contact> {

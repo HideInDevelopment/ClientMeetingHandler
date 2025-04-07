@@ -10,21 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/client.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/client.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/contact.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/contact.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/location.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/location.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/meeting.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/meeting.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/note.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/note.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service-type.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service-type.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/service.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/services/contact.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/services/contact.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-detail/client-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-detail/client-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-detail/client-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-detail/client-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-list/client-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-list/client-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-list/client-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-list/client-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +60,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.ClientMeetingHandler: http.executor": "Debug",
+    ".NET Launch Settings Profile.ClientMeetingHandler: http.executor": "Run",
     ".NET Launch Settings Profile.ClientMeetingHandler: https.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -139,7 +128,8 @@
       <workItem from="1743869163081" duration="8135000" />
       <workItem from="1743916315295" duration="19218000" />
       <workItem from="1743947147445" duration="1007000" />
-      <workItem from="1743954822075" duration="2831000" />
+      <workItem from="1743954822075" duration="2835000" />
+      <workItem from="1744000861865" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />
