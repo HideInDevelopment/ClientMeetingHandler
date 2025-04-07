@@ -10,24 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dff38580-f8da-47ba-8fe9-bcfce2a4d062" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClientMeetingHandler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/mappings/ServiceMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/mappings/ServiceMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ContactService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ContactService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/LocationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/LocationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/MeetingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/MeetingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/NoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/NoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ServiceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ServiceService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ServiceTypeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/application/services/ServiceTypeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/domain/entities/Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/Migrations/20250406102807_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/Migrations/20250406102807_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/infrastructure/persistence/configurations/ClientConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/service/ServiceDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/service/ServiceDetailDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/service/ServiceDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClientMeetingHandler/presentation/dto/service/ServiceDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/contact.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/core/models/contact.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/clients/client-form/client-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/contacts/contact-modal/contact-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/contacts/contact-modal/contact-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/contacts/contact-modal/contact-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../FRONT/client-meeting-handler-ui/src/app/features/contacts/contact-modal/contact-modal.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +130,7 @@
       <workItem from="1743916315295" duration="19218000" />
       <workItem from="1743947147445" duration="1007000" />
       <workItem from="1743954822075" duration="2835000" />
-      <workItem from="1744000861865" duration="5585000" />
+      <workItem from="1744000861865" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="Main - Initial setup">
       <option name="closed" value="true" />

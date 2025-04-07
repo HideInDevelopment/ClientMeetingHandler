@@ -1,7 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Contact} from '../../../core/models/contact.model';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {CommonModule} from '@angular/common';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Contact } from '../../../core/models/contact.model';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-modal',
@@ -9,9 +9,12 @@ import {CommonModule} from '@angular/common';
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact-modal.component.html'
 })
-export class ContactModalComponent implements OnInit {
+export class ContactModalComponent implements OnInit, OnChanges {
   @Input() isOpen = false;
   @Input() email = '';
+  @Input() contactData: Contact | null = null;
+  @Input() isEditMode = false;
+
   @Output() close = new EventEmitter<void>();
   @Output() save = new EventEmitter<Contact>();
 
@@ -29,8 +32,42 @@ export class ContactModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.email) {
-      this.contactForm.patchValue({ Email: this.email });
+    this.initializeForm();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // If contactData changes, reinitialize the form
+    if (changes['contactData'] || changes['isOpen'] || changes['isEditMode']) {
+      console.log("Modal isEditMode changed to:", this.isEditMode);
+      console.log("Modal contactData:", this.contactData);
+      this.initializeForm();
+    }
+  }
+
+  initializeForm(): void {
+    // Reset form
+    this.contactForm.reset();
+
+    console.log("Initializing form. isEditMode:", this.isEditMode, "contactData:", this.contactData);
+
+    if (this.isEditMode && this.contactData) {
+      // In edit mode, populate form with existing contact data
+      this.contactForm.patchValue({
+        Id: this.contactData.Id,
+        Email: this.contactData.Email,
+        Country: this.contactData.Country,
+        PhoneNumber: this.contactData.PhoneNumber.toString(),
+        ClientId: this.contactData.ClientId
+      });
+      console.log("Form initialized in EDIT mode with data:", this.contactForm.value);
+    } else {
+      // In add mode, initialize with new ID and email if provided
+      this.contactForm.patchValue({
+        Id: this.generateGuid(),
+        Email: this.email || '',
+        ClientId: ''
+      });
+      console.log("Form initialized in CREATE mode with data:", this.contactForm.value);
     }
   }
 
@@ -41,7 +78,7 @@ export class ContactModalComponent implements OnInit {
       return;
     }
 
-    const newContact: Contact = {
+    const contactData: Contact = {
       Id: this.contactForm.value.Id,
       Email: this.contactForm.value.Email,
       Country: this.contactForm.value.Country,
@@ -49,7 +86,7 @@ export class ContactModalComponent implements OnInit {
       ClientId: this.contactForm.value.ClientId
     };
 
-    this.save.emit(newContact);
+    this.save.emit(contactData);
   }
 
   onCancel(): void {

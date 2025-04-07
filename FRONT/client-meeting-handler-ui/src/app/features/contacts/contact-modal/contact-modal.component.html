@@ -1,7 +1,7 @@
 <div *ngIf="isOpen" class="fixed inset-0 z-50 overflow-auto bg-gray-500 bg-opacity-75 flex items-center justify-center">
   <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 mx-4">
     <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-bold">Create New Contact</h2>
+      <h2 class="text-xl font-bold">{{ isEditMode ? 'Edit Contact' : 'Create New Contact' }}</h2>
       <button type="button" class="text-gray-500 hover:text-gray-700" (click)="onCancel()">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -66,7 +66,7 @@
           type="submit"
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Save Contact
+          {{ isEditMode ? 'Update Contact' : 'Save Contact' }}
         </button>
       </div>
     </form>

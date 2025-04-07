@@ -1,7 +1,7 @@
 import {Client} from './client.model';
 
 export interface Contact {
-  Id: String;
+  Id: string;
   Country: string;
   PhoneNumber: number;
   Email: string;

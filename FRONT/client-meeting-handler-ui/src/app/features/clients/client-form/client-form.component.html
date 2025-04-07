@@ -27,47 +27,44 @@
         </div>
       </div>
 
-      <!-- Selector de contacto con búsqueda -->
-      <div class="form-group relative">
-        <label for="contactEmail" class="block text-gray-700 text-sm font-bold mb-2">Contact:</label>
-        <div class="relative">
-          <input
-            type="text"
-            id="contactEmail"
-            formControlName="contactEmail"
-            placeholder="Search by email..."
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            (focus)="showContactDropdown = true"
-            (blur)="hideDropdown()"
+      <!-- Contact Information Section -->
+      <div class="form-group">
+        <div class="flex justify-between items-center mb-2">
+          <label class="block text-gray-700 text-sm font-bold">Contact Information:</label>
+
+          <!-- Add Contact button (only shown if no contact exists) -->
+          <button
+            *ngIf="!hasContact"
+            type="button"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm"
+            (click)="openContactModal()"
           >
-          <!-- Lista desplegable de contactos filtrados -->
-          <div *ngIf="showContactDropdown"
-               class="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto">
-            <!-- Opción para crear nuevo contacto -->
-            <div class="cursor-pointer hover:bg-blue-50 p-2 border-b border-gray-100 flex items-center"
-                 (mousedown)="openContactModal()">
-              <span class="text-blue-500 font-bold mr-2">+</span> Create new contact
-            </div>
+            Add Contact
+          </button>
 
-            <!-- Lista de contactos filtrados -->
-            <div *ngFor="let contact of filteredContacts"
-                 class="cursor-pointer hover:bg-gray-100 p-2 border-b border-gray-100"
-                 (mousedown)="selectContact(contact)">
-              {{ contact.Email }}
-            </div>
-
-            <!-- Mensaje si no hay resultados -->
-            <div *ngIf="filteredContacts.length === 0" class="p-2 text-gray-500">
-              No contacts found
-            </div>
-          </div>
+          <!-- Edit Contact button (only shown if contact exists) -->
+          <button
+            *ngIf="hasContact"
+            type="button"
+            class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-3 rounded text-sm"
+            (click)="openContactModal()"
+          >
+            Edit Contact
+          </button>
         </div>
 
-        <!-- Campo oculto para el ID del contacto -->
+        <!-- Display contact info if exists -->
+        <div *ngIf="hasContact" class="bg-gray-50 p-4 rounded-lg mb-2">
+          <div class="mb-1"><span class="font-medium">Email:</span> {{ contactEmail }}</div>
+          <div *ngIf="contactDetails" class="mb-1"><span class="font-medium">Phone:</span> {{ contactDetails.PhoneNumber }}</div>
+          <div *ngIf="contactDetails" class="mb-1"><span class="font-medium">Country:</span> {{ contactDetails.Country }}</div>
+        </div>
+
+        <!-- Hidden field for ContactId -->
         <input type="hidden" formControlName="ContactId">
 
-        <div *ngIf="submitted && f['ContactId'].errors" class="text-red-500 mt-1 text-sm">
-          <div *ngIf="f['ContactId'].errors['required']">Contact selection is required</div>
+        <div *ngIf="submitted && !hasContact" class="text-red-500 mt-1 text-sm">
+          Please add contact information for this client
         </div>
       </div>
 
@@ -90,11 +87,20 @@
     </form>
   </div>
 
-  <!-- Modal para crear nuevo contacto -->
+  <!-- Modal for creating/editing contact -->
   <app-contact-modal
     [isOpen]="showContactModal"
-    [email]="clientForm.get('contactEmail')?.value"
+    [email]="contactEmail"
+    [contactData]="contactDetails"
+    [isEditMode]="hasContact"
     (close)="closeContactModal()"
-    (save)="saveNewContact($event)"
+    (save)="saveContact($event)"
   ></app-contact-modal>
+
+  <!-- Debugging info (puedes quitarlo después) -->
+  <div *ngIf="false" class="mt-4 p-4 bg-gray-100 rounded">
+    <p>Debug: hasContact = {{hasContact}}</p>
+    <p>Debug: contactId = {{clientForm.get('ContactId')?.value}}</p>
+    <pre>contactDetails = {{contactDetails | json}}</pre>
+  </div>
 </div>
